@@ -122,7 +122,7 @@ Note the absence of boolean!
 
 > “The value of the int variable x is 89”
 is actually
-“The sequence of bits at the location in memory named x corresponds to the abstract value 89 when interpreted as an int"
+>“The sequence of bits at the location in memory named x corresponds to the abstract value 89 when interpreted as an int"
 
 # i/o basics
 To do any input and output in C, you must use the
