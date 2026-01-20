@@ -1,0 +1,141 @@
+\documentclass[12pt, letterpaper]{article}
+\title{pset 1}
+\author{Jaden Lee\thanks{made in Overleaf}}
+\date{Thursday, January 22nd, 2025}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\begin{document}
+\maketitle
+link to problem: \hyperlink{https://yale.instructure.com/courses/113840/assignments/558946}{https://yale.instructure.com/courses/113840/assignments/558946}
+% \neg for neg
+% \wedge for and 
+% \vee for or
+% \rightarrow
+% \equiv
+
+\section{Problem 1}
+(16 points): Show that 
+$(\neg p \vee q) \rightarrow (r \wedge \neg q) $
+ and 
+ $ (\neg q \wedge (p \vee r )) $
+ are logically equivalent
+\begin{itemize}
+    \item using truth tables (show your intermediate work)
+    \item using the list of logical equivalences including the conversion from $\rightarrow$ to $\neg$ and $\vee$ labelling each step with the rule(s) you are using.
+\end{itemize}
+
+\subsection{solution}
+
+\[
+\begin{aligned}
+(\neg p \vee q) \rightarrow (r \wedge \neg q)
+&\equiv (\neg p \vee q) \rightarrow (r \wedge \neg q)
+&& \text{(given)} \\
+&\equiv \neg(\neg p \vee q) \vee (r \wedge \neg q)
+&& \text{(substitution**)} \\
+&\equiv (p \wedge \neg q) \vee (r \wedge \neg q)
+&& \text{(De Morgan)} \\
+&\equiv \neg q \wedge (p \vee r)
+&& \text{((reverse) distributive )}
+\end{aligned}
+\]
+** since we know that $p \rightarrow q \equiv \neg p \vee q$
+
+\section{problem 2}
+
+(16 points): Let 
+\emph{a} be the statement "Alex teaches CS", 
+\emph{b} be the statement "Buwan teaches CS", and 
+\emph{c} be the statement "Chichima teaches physics."
+
+
+\begin{itemize}
+    \item For each of the following, write the statement form that most closely follows the natural language, and a logically equivalent statement form that does not use \(\wedge\)
+        \begin{itemize}
+            \item It is not the case that both Alex teaches CS and Chichima teaches physics.
+            \item Neither Alex nor Buwan teaches CS.
+        \end{itemize}
+    \item For each of the following, write the statement form that most closely follows the natural language, and a logically equivalent statement form that uses only $\neg$ $\wedge$ (and parentheses to force order of operations when necessary).
+        \begin{itemize}
+            \item It is not the case that at least one of Alex or Buwan teaches CS.
+            \item If Chichima teaches physics then Alex does not teach CS.
+        \end{itemize}
+\end{itemize}
+
+\subsection{solution to part 1}
+where it is instructed to not use $\wedge$ (and), or $\rightarrow$ (if/then)
+\subsubsection{question 1}
+"It is not the case that both Alex teaches CS and Chichima teaches physics." translates literally to $$\neg (a \wedge c)$$
+however, since we cannot use $\wedge$ (and), we must translate this to an equivalent expression. using distributive law, we find that 
+$$\neg (a \wedge c) \equiv \neg a \vee \neg c $$
+\subsubsection{question 2}
+"Neither Alex nor Buwan teaches CS." translates directly to $$\neg a \vee \neg b$$ However, since this does not use $\wedge$ (and), and since we are using inclusive or (not XOR) this problem is already complete.
+
+\subsection{solution to part 2}
+where it is instructed to not use $\vee$ (or), or $\rightarrow$ (if/then)
+\subsubsection{question 1}
+"It is not the case that at least one of Alex or Buwan teaches CS." translates literally to $$\neg(a \wedge c)$$ note that this does not use $\vee$, and is thus complete.
+\subsubsection{question 2}
+"If Chichima teaches physics then Alex does not teach CS;" note the presence of the if/then statement. this then can be translated as 
+$$ c \rightarrow \neg a $$
+from here, we can replace the if/then ("$\rightarrow$")
+$$\equiv \neg c \vee \neg a$$
+we can see here the $\vee$ (or) has appeared. However, using the distributive law in reverse, we find this expression equivalent to
+$$\equiv \neg (c \wedge a)$$
+which thus completes the problem
+
+
+
+\section{Problem 3}
+
+(4 points): In addition to and, or, not, and if/then, we can define other logical operators. For example, the binary operator NAND ("not and"), with p NAND q (written p $\uparrow$ q) logically equivalent to $\neg (p \wedge q)$. 
+
+the truth table for NAND is then 
+
+\begin{table}[htbp]
+\begin{tabular}{|l|l|l|}
+\hline
+p & q & p $\uparrow$ q \\ \hline
+t & t & f              \\ \hline
+t & f & t              \\ \hline
+f & t & t              \\ \hline
+f & f & t              \\ \hline
+\end{tabular}
+\end{table}
+
+Find a statement form logically equivalent to $\neg (p \wedge \neg p) \vee r$ that uses (possibly more than once) $\uparrow$ as its only logical operator. You will find it helpful to complete the Canvas quiz before attempting this question.
+
+\subsection{solution}
+Given that  
+$$\neg (p \wedge \neg p) \vee r$$
+and that given arbitrary $a$ and $b$:
+$$\neg (a \wedge b) \equiv a \uparrow b$$
+we can use this definition to say this expression is equivalent to
+$$(p \uparrow \neg q) \vee r$$
+specifically, using $p$ as $a$ and $\neg q$ as b. 
+
+Furthermore we can simplify further, saying that this is equivalent by negation:
+$$\neg (\neg r \wedge \neg (p \uparrow \neg q))$$
+which, using the identity mentioned earlier, we can substitute in $\uparrow$s (nand):
+$$\neg r \uparrow \neg (p  \uparrow \neg q)$$
+to complete this solution, we can make one final identity: that $$\neg a \equiv a \uparrow a$$ 
+(this truth table will be expounded later). For now, however, we can use this identity to complete the solution with only $\uparrow$ (nand):
+$$(r \uparrow r) \uparrow ((p \uparrow (q \uparrow q)) \uparrow (p \uparrow (q \uparrow q)))$$
+as you can see, a section is duplicated to account for the double input of $\uparrow$ (nand)
+
+\newpage
+\section{truth tables and figures}
+here is a proof of the substitution used earlier:
+\subsection{solution 3.1}
+$$\neg a \equiv a \uparrow a$$ 
+
+
+\begin{table}[htbp]
+\begin{tabular}{|l|l|l|l|}
+\hline
+a & $\neg$ a & a $\wedge$ a & a $\uparrow$ a \\ \hline
+1 & 0        & 1            & 0             \\ \hline
+0 & 1        & 0            & 1             \\ \hline
+\end{tabular}
+\end{table}
+\end{document}
