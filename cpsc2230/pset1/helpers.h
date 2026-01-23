@@ -3,7 +3,7 @@
 Interface for helper functions for Game of Life assignment for CPSC 223 Spring 2024.
 
 Author: Alan Weide
-Modified by: STUDENT NAME HERE
+Modified by: Jaden Lee
 Changelog:
 */
 

@@ -3,7 +3,7 @@
 Interface for core functions for Game of Life assignment in CPSC 223 fall 2024
 
 Author: Alan Weide
-Modified by: STUDENT NAME HERE
+Modified by: Jaden Lee
 Changelog:
  */
 #include <stdbool.h>
