@@ -26,3 +26,14 @@ void print_initial(int field[ROWS][COLS]);
  * @does prints the string "Step {gen}" on its own line followed by ROWS lines each containing a row of the field, in a space-separated list beginning at column 4
  */
 void print_generation(int field[ROWS][COLS], unsigned int gen);
+
+
+/* *
+* takes in a string of 1 and 0 and turn it into # and ' '
+*/
+
+char convtohash(char onezero);
+
+/* *
+* set 2 2d arrays equal to each other
+*/

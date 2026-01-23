@@ -41,3 +41,11 @@ void print_generation(int field[ROWS][COLS], unsigned int gen)
         printf("\n");
     }
 }
+
+char convtohash(char onezero) {
+    if (onezero == '1') {
+        return '#';
+    } else {
+        return ' ';
+    }
+}

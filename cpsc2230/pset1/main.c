@@ -7,6 +7,8 @@ Author: Jaden Lee
 #include <stdlib.h>
 #include <stdio.h>
 
+#include <string.h>
+
 #include "constants.h"
 #include "life.h"
 #include "helpers.h"
@@ -24,8 +26,8 @@ int main(int argc, char *argv[])
      *      representing the initial state for this run of Game of Life.
      */
 
-     int time_steps = argv[0];
-     char init[] = argv[1];
+     int time_steps = atoi(argv[1]);
+    //  char* init[] = argv[2];
 
     /*
      * TODO: Create a new statically-allocated array of size ROWS x COLS
@@ -36,7 +38,7 @@ int main(int argc, char *argv[])
      int counter = 0;
      for (int i = 0; i < ROWS; i ++) {
         for (int j = 0; j < COLS; j ++){
-            arr[i][j] = init[counter];
+            arr[i][j] = convtohash(argv[2][counter]);
             counter++;
         }
      }
@@ -51,12 +53,15 @@ int main(int argc, char *argv[])
      * each step
      */
      int i = 1;
-     int hold[ROWS][COLS] = arr;
+     int hold[ROWS][COLS];
+
+     memcpy(hold, arr, sizeof(arr)); // set hold to arr
+
      while (i <= time_steps){
         i++; 
         compute_next_gen(hold, arr);
         print_generation(arr, i);
-        hold = arr;
+        memcpy(hold, arr, sizeof(arr));
     }
     /*
      * Print "Done." then exit.
