@@ -152,4 +152,37 @@ body {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    /* text-wrap: inherit; */
+}
+
+.flex-row {
+    display: flex;
+
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#right1 {
+    flex: 1 0 75%;
+}
+
+#left1 {
+    flex: 1 0 25%;
+}
+
+#right2 {
+    flex: 1 0 25%;
+}
+
+#left2 {
+    flex: 1 0 75%;
+}
+
+.flex-column {
+    display: flex;
+
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
 }
