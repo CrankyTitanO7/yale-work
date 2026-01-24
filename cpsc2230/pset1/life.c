@@ -23,14 +23,14 @@ unsigned int num_living_neighbors(int field[ROWS][COLS], size_t i, size_t j)
     int ali = 0;
 
     int imin;
-    if (i-1 < 0) imin = 0; else imin = (i-1);
+    if (i == 0) imin = 0; else imin = (i-1);
     int imax; 
     if (i+1 >= ROWS) imax = ROWS-1; else imax = (i+1);
 
     int jmin;
-    if (j-1 < 0) jmin = 0; else jmin = (j-1);
+    if (j == 0) jmin = 0; else jmin = (j-1);
     int jmax; 
-    if (j+1 >= ROWS) jmax = ROWS-1; else jmax = (j+1);
+    if (j+1 >= COLS) jmax = COLS-1; else jmax = (j+1);
 
     
     for (int k = imin; k <= imax; k++) {
@@ -47,11 +47,11 @@ int get_next_state(int field[ROWS][COLS], size_t i, size_t j)
 {
     int n = num_living_neighbors(field, i, j);
     // filter out things with too little or much neighbors
-    if (n < 2 || n > 3) return DEAD;
+    if (n < 2 || n > 3) return ' ';
     // filter out things that are dead with 2 neighbors
-    if (n == 2 && !is_alive(field, i, j)) return DEAD;
+    if (n == 2 && !is_alive(field, i, j)) return ' ';
     //everything else can be alive (dead with 3 OR alive with 2-3)
-    return ALIVE;
+    return '#';
 }
 
 void compute_next_gen(int cur_field[ROWS][COLS], int next_field[ROWS][COLS])

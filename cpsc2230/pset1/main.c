@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
      memcpy(hold, arr, sizeof(arr)); // set hold to arr
 
      // debug 
-     printf("%d", time_steps);
+    //  printf("%d", time_steps);
 
      while (i <= time_steps){
         compute_next_gen(hold, arr);
