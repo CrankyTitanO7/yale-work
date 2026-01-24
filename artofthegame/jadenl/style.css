@@ -80,6 +80,11 @@
     background-size: cover;
     background-position: center;
 }
+#group3 .parallax__layer--back {
+    background-image: url("otherbg.png");
+    background-size: cover;
+    background-position: center;
+}
 
 #group4 {
     z-index: 2; /* slide under group 3 and 5 */
