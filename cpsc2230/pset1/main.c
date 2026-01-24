@@ -52,16 +52,24 @@ int main(int argc, char *argv[])
      * TODO: Run the game time_steps times, printing the field at the end of
      * each step
      */
+
+    //  printf("step complete");
      int i = 1;
      int hold[ROWS][COLS];
 
+     
+
      memcpy(hold, arr, sizeof(arr)); // set hold to arr
 
+     // debug 
+     printf("%d", time_steps);
+
      while (i <= time_steps){
-        i++; 
         compute_next_gen(hold, arr);
         print_generation(arr, i);
         memcpy(hold, arr, sizeof(arr));
+        i++; 
+        // printf("%d", i);
     }
     /*
      * Print "Done." then exit.

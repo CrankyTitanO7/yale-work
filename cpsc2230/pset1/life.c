@@ -33,8 +33,8 @@ unsigned int num_living_neighbors(int field[ROWS][COLS], size_t i, size_t j)
     if (j+1 >= ROWS) jmax = ROWS-1; else jmax = (j+1);
 
     
-    for (int k = imin; k < imax; k++) {
-        for (int m = jmin; k < jmax; j++){
+    for (int k = imin; k <= imax; k++) {
+        for (int m = jmin; m <= jmax; m++){
             if (is_alive(field, k, m)) ali ++;
         }
     }
