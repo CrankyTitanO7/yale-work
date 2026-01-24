@@ -4,8 +4,8 @@
   --------------------------------------------- */
 
 .parallax {
-    height: 500px; /* fallback for older browsers */
     height: 100vh;
+    width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-perspective: 300px;
@@ -15,8 +15,8 @@
 
 .parallax__group {
     position: relative;
-    height: 500px; /* fallback for older browsers */
     height: 100vh;
+    width: 100vw;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
@@ -30,6 +30,7 @@
 }
 
 .parallax__layer--fore {
+    background-image: url("fg.png");
     -webkit-transform: translateZ(90px) scale(0.7);
     transform: translateZ(90px) scale(0.7);
     z-index: 1;
@@ -57,54 +58,72 @@
     z-index: 5; /* slide over group 2 */
 }
 #group1 .parallax__layer--base {
-    background: rgb(102, 204, 102);
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
 }
 
 #group2 {
     z-index: 3; /* slide under groups 1 and 3 */
 }
 #group2 .parallax__layer--back {
-    background: rgb(123, 210, 102);
+    /* background-image: url("bg.png"); */
+    background-size: cover;
+    background-position: center;
 }
 
 #group3 {
     z-index: 4; /* slide over group 2 and 4 */
 }
 #group3 .parallax__layer--base {
-    background: rgb(153, 216, 101);
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
 }
 
 #group4 {
     z-index: 2; /* slide under group 3 and 5 */
 }
 #group4 .parallax__layer--deep {
-    background: rgb(184, 223, 101);
+    background-image: url("bgbg.png");
+    background-size: cover;
+    background-position: center;
 }
 
 #group5 {
     z-index: 3; /* slide over group 4 and 6 */
 }
 #group5 .parallax__layer--base {
-    background: rgb(214, 229, 100);
+    /* background-image: url("fg.png"); */
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
 }
 
 #group6 {
     z-index: 2; /* slide under group 5 and 7 */
 }
 #group6 .parallax__layer--back {
-    background: rgb(245, 235, 100);
+    /* background-image: url("bg.png"); */
+    background-size: cover;
+    background-position: center;
 }
 
 #group7 {
     z-index: 3; /* slide over group 7 */
 }
 #group7 .parallax__layer--base {
-    background: rgb(255, 241, 100);
+    /* background-image: url("fg.png"); */
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
 }
 
 body,
 html {
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 body {
