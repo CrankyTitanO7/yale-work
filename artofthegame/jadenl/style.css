@@ -131,13 +131,18 @@
 
 body,
 html {
+    font-family: "EB Garamond", serif;
+    font-weight: 150;
+
     overflow: hidden;
     margin: 0;
     padding: 0;
+
+    color: white;
 }
 
 body {
-    font: 100% / 1.5 Arial;
+    font: 100% / 1.5;
 }
 
 * {
@@ -204,7 +209,7 @@ body {
 
 .text {
     /* Frosted black glass */
-    background: rgba(114, 166, 215, 0.6);
+    background: rgba(66, 126, 182, 0.6);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 
@@ -224,6 +229,16 @@ body {
 
 .text > * {
     margin: 10px; /* Applies a 10px margin to all direct children */
+}
+
+/* Fix for list bullets appearing outside the container */
+.text ul {
+    margin-left: 20px; /* Adjust left margin for proper bullet positioning */
+    padding-left: 0; /* Remove default padding */
+}
+
+.text li {
+    margin-bottom: 5px; /* Add spacing between list items */
 }
 
 figure img {
@@ -249,9 +264,10 @@ figure img {
 .card {
     width: 200px;
     height: 250px;
-    margin: 0.5rem auto;
+    margin: 0.5rem;
     perspective: 1000px;
     cursor: pointer;
+    flex: 0 0 auto; /* Prevent cards from growing/shrinking */
 }
 
 .card-inner {
@@ -301,7 +317,11 @@ figure img {
 .card-row {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    justify-content: center; /* Center cards horizontally */
+    align-items: flex-start; /* Align cards at the top */
+    gap: auto; /* Add consistent spacing between cards */
+    flex-wrap: wrap; /* Allow cards to wrap to next line if needed */
+    margin: auto; /* Add vertical spacing between rows */
 }
 
 /* Fix for group4 cards not flipping on hover */
@@ -312,4 +332,11 @@ figure img {
 
 a {
     text-align: inherit;
+    text-decoration: underline;
+    color: rgb(79, 128, 193);
+}
+
+.subtext {
+    font-size: medium;
+    font-style: italic;
 }

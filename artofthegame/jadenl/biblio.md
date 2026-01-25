@@ -1,3 +1,6 @@
 - parallax scroll
     - https://codepen.io/evolutionxbox/pen/JjvWPo
     - keith clark
+- Double-sided card
+    - https://codepen.io/nefejames/pen/RNbPZpp
+    - Emadamerho Nefe
