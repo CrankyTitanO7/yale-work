@@ -212,3 +212,13 @@ body {
 .text > * {
     margin: 10px; /* Applies a 10px margin to all direct children */
 }
+
+figure img {
+    object-fit: cover;
+}
+
+figure img[src*="keith-haring-arrest"] {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+}
