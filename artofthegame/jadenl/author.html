@@ -11,6 +11,8 @@
 
         <link rel="stylesheet" href="style.css" />
         <script src="script.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     </head>
     <body>
         <!-- <h2></h2>
@@ -27,8 +29,14 @@
                 </div>
                 <div class="parallax__layer parallax__layer--base">
                     <div class="title text">
-                        <h1>a nice title</h1>
-                        also an image
+                        <p>
+                            the amazing <br />
+                            the hilarious <br />
+                            the talented <br />
+                            the spectacular <br />
+                        </p>
+                        <h1>Jaden Lee</h1>
+                        <img alt="zote" src="zote.png" />
                     </div>
                 </div>
                 <div class="parallax__layer parallax__layer--back">
@@ -47,10 +55,14 @@
                     <div class="title text">
                         <div class="flex-row">
                             <div id="left1">
-                                <figure>
-                                    <img alt="handsome guy" />
-                                    <figcaption>Me</figcaption>
-                                </figure>
+                                <div class="holographic-container">
+                                    <div class="holographic-card">
+                                        <figure>
+                                            <img src="jaden.png" alt="handsome guy" />
+                                            <figcaption>Me in a wizard hat. It brings good fortune.</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
                             </div>
                             <div class="flex-column" id="right1">
                                 <div id="tright">
@@ -72,7 +84,7 @@
                                             loading="lazy"
                                             referrerpolicy="no-referrer-when-downgrade"
                                         ></iframe>
-                                        <figcaption style="font-size: medium">IKEA, New Haven</figcaption>
+                                        <figcaption>IKEA, New Haven</figcaption>
                                     </figure>
                                 </div>
                             </div>
@@ -185,15 +197,11 @@
                                 Favorite Works of Art
                                 <figure>
                                     <img alt="an artwork" src="./keith-haring-arrest.png" />
-                                    <figcaption style="font-size: medium">
-                                        Keith Haring (1958-1990) being arrested for graffitti
-                                    </figcaption>
+                                    <figcaption>Keith Haring (1958-1990) being arrested for graffitti</figcaption>
                                 </figure>
                                 <figure>
                                     <img alt="an artwork" src="./garden.png" />
-                                    <figcaption style="font-size: medium">
-                                        Garden of Earthly Delights by Hieronymous Bosch
-                                    </figcaption>
+                                    <figcaption>Garden of Earthly Delights by Hieronymous Bosch</figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -399,8 +407,21 @@
                                         <li>cooperation and competition</li>
                                     </ul>
                                 </div>
+                                <figure>
+                                    <img src="./samgp.png" alt="samsara room gameplay" />
+                                    <figcaption>samsara room</figcaption>
+                                </figure>
                             </div>
-                            <div id="right1">images???</div>
+                            <div id="right1">
+                                <figure>
+                                    <img src="./hkgp.png" alt="hollow knight gameplay" />
+                                    <figcaption>hollow knight</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="./origp.png" alt="ori gameplay" />
+                                    <figcaption>ori and the blind forest</figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -418,7 +439,7 @@
                 <div class="parallax__layer parallax__layer--base">
                     <div class="title text">
                         <div class="flex-row">
-                            <div id="left1">images???</div>
+                            <!-- <div id="left1">images???</div> -->
                             <div class="flex-column" id="right1">
                                 <div id="tright">
                                     <h2>Website Sources and Inspiration</h2>
@@ -428,25 +449,49 @@
                                         <li>
                                             Parallax Scroll
                                             <ul>
-                                                <li>Author:</li>
-                                                <li>modified by:</li>
-                                                <a><li>link to blog</li></a>
-                                                <a><li>link to preview</li></a>
+                                                <li>Author: keith clark</li>
+                                                <li>modified by: Jaden Lee</li>
+                                                <a href="https://codepen.io/evolutionxbox/pen/JjvWPo">
+                                                    <li>link to preview</li>
+                                                </a>
                                             </ul>
                                         </li>
                                         <li>
                                             card flip animation
                                             <ul>
-                                                <li>Author:</li>
-                                                <li>modified by:</li>
-                                                <a><li>link to preview</li></a>
+                                                <li>Author: Emadamerho Nefe</li>
+                                                <li>modified by: Jaden Lee</li>
+                                                <a href="https://codepen.io/nefejames/pen/RNbPZpp">
+                                                    <li>link to preview</li>
+                                                </a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            hover holo effect
+                                            <ul>
+                                                <li>Author: Emadamerho Nefe</li>
+                                                <li>modified by: Jaden Lee</li>
+                                                <a href="https://codepen.io/nefejames/pen/ogvNgJq">
+                                                    <li>link to preview</li>
+                                                </a>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            button effect
+                                            <ul>
+                                                <li>Author: Kocsten</li>
+                                                <li>modified by: Jaden Lee</li>
+                                                <a href="https://codepen.io/kocsten/pen/rggjXp">
+                                                    <li>link to preview</li>
+                                                </a>
                                             </ul>
                                         </li>
                                         <li>
                                             general resources
                                             <ul>
-                                                <a><li>W3 Schools</li></a>
-                                                <a><li>mozilla firefox documentation</li></a>
+                                                <a href=""><li>W3 Schools</li></a>
+                                                <a href=""><li>mozilla firefox documentation</li></a>
+                                                <li>images largely from wikipedia</li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -461,6 +506,15 @@
                                 </div>
                             </div>
                         </div>
+                        <button
+                            class="glow-on-hover"
+                            type="button"
+                            class="button mt-4"
+                            id="confetti-again-btn"
+                            onclick="fire()"
+                        >
+                            confetti again
+                        </button>
                     </div>
                 </div>
                 <div class="parallax__layer parallax__layer--back">
@@ -485,6 +539,7 @@
                 </div>
             </div> -->
         </div>
+        <footer></footer>
     </body>
 </html>
 

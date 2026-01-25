@@ -4,3 +4,9 @@
 - Double-sided card
     - https://codepen.io/nefejames/pen/RNbPZpp
     - Emadamerho Nefe
+- hover holo effect
+    - https://codepen.io/nefejames/pen/ogvNgJq
+    - Emadamerho Nefe
+- button effect
+    - https://codepen.io/kocsten/pen/rggjXp
+    - Kocsten
