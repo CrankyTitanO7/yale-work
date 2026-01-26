@@ -246,39 +246,39 @@ figure img {
 }
 
 figure img {
-    width: 300px;
+    width: 16.602vw;
     height: auto;
     max-width: 100%;
 }
 
 figure img[src*="hkgp"] {
-    width: 485px;
+    width: 26.84vw;
     height: auto;
     max-width: 100%;
 }
 
 figure img[src*="origp"] {
-    width: 485px;
+    width: 26.84vw;
     height: auto;
     max-width: 100%;
 }
 figure img[src*="samgp"] {
     align-self: center;
-    width: 485px;
+    width: 26.84vw;
     height: auto;
     max-width: 100%;
 }
 
 figure img[src*="jaden"] {
     align-self: center;
-    width: 500px;
+    width: 27.67vw;
     height: auto;
     max-width: 100%;
 }
 
 img[src*="zote"] {
     align-self: center;
-    width: 700px;
+    width: 38.738vw;
     height: auto;
     max-width: 100%;
 }
@@ -294,8 +294,8 @@ img[src*="zote"] {
 /* custom css part two */
 
 .card {
-    width: 200px;
-    height: 250px;
+    width: 11.068vw;
+    height: 27.933vh;
     margin: 0.5rem;
     perspective: 1000px;
     cursor: pointer;
@@ -394,7 +394,7 @@ figcaption {
     border-radius: 15px;
     transition: all 0.5s ease;
 
-    transform: translateY(-130px);
+    transform: translateY(-14.525vh);
 }
 
 .holographic-card::before {
@@ -411,7 +411,7 @@ figcaption {
 }
 
 .holographic-card:hover {
-    transform: translateY(-130px);
+    transform: translateY(-14.525vh);
     transform: scale(1.05);
     /* z-index: -1; */
     /* box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); */
@@ -423,8 +423,8 @@ figcaption {
 }
 
 .glow-on-hover {
-    width: 220px;
-    height: 50px;
+    width: 12.175vw;
+    height: 5.587vh;
     border: none;
     outline: none;
     color: #fff;
