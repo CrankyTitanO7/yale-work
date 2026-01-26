@@ -143,6 +143,7 @@ html {
 
 body {
     font: 100% / 1.3vw;
+    font-size: .7rem;
 }
 
 * {
