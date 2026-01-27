@@ -44,8 +44,8 @@ void print_generation(int field[ROWS][COLS], unsigned int gen)
 
 char convtohash(char onezero) {
     if (onezero == '1') {
-        return '#';
+        return ALIVE;
     } else {
-        return ' ';
+        return DEAD;
     }
 }

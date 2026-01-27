@@ -14,7 +14,7 @@ Changelog:
 
 bool is_alive(int field[ROWS][COLS], size_t i, size_t j)
 {
-    if (field[i][j] == 35) return true;
+    if (field[i][j] == ALIVE) return true;
     return false;
 }
 
@@ -47,11 +47,11 @@ int get_next_state(int field[ROWS][COLS], size_t i, size_t j)
 {
     int n = num_living_neighbors(field, i, j);
     // filter out things with too little or much neighbors
-    if (n < 2 || n > 3) return ' ';
+    if (n < 2 || n > 3) return DEAD;
     // filter out things that are dead with 2 neighbors
-    if (n == 2 && !is_alive(field, i, j)) return ' ';
+    if (n == 2 && !is_alive(field, i, j)) return DEAD;
     //everything else can be alive (dead with 3 OR alive with 2-3)
-    return '#';
+    return ALIVE;
 }
 
 void compute_next_gen(int cur_field[ROWS][COLS], int next_field[ROWS][COLS])
