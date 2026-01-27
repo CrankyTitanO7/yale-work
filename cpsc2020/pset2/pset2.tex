@@ -1,0 +1,129 @@
+\documentclass[12pt, letterpaper]{article}
+\title{pset 2\thanks{made in Overleaf}}
+\author{Jaden Lee}
+\date{Thursday, 1/29/26}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\begin{document}
+\maketitle
+\hyperlink{https://yale.instructure.com/courses/113840/assignments/558950}{https://yale.instructure.com/courses/113840/assignments/558950}
+% \neg for neg
+% \wedge for and 
+% \vee for or
+% \rightarrow
+% \equiv
+
+% https://www.tablesgenerator.com/# <-- latex table generator
+
+\section{Problem 1}
+Show how to come to the conclusion $v$ given the following premises. Show which rule of inference you used at each step and which premises and/or previous conclusions you applied them to.
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|l|}
+\hline
+$p \vee \neg q \vee r$      \\ \hline
+$p \rightarrow s$           \\ \hline
+$s \rightarrow v$           \\ \hline
+$\neg q \rightarrow \neg u$ \\ \hline
+$u$                         \\ \hline
+$r \rightarrow v$           \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{solution} 
+we are given $u$=true. from this, using negation, we can derive that $\neg u$ is false. From this we can further derive that, because $\neg q \rightarrow \neg u$ is true and since $\neg u $ is false, we are forced to conclude that $\neg q$ is also false.
+
+In other words, if we were to entertain that $\neg q$ is true while knowing $\neg u$ is false, that would result in us concluding that the given predicate $\neg q \rightarrow \neg u$ is not true, which is not the case.
+
+From here, we arrive at the rule that $p \vee \neg q \vee r$. However, since we know $\neg q$ to be false, we must assume that either $r$ is true or $p$ is true. In other words, we know that $r \vee p$ must be true.
+
+From here, we may consider the case that $p$ is true. Since we are given the rule that $p \rightarrow s$, to abide by this rule in this scenario $s$ is true. From this, we are also given that $s \rightarrow v$, so to abide by \emph{that} rule, $v$ must also be true.
+
+Now let us consider the other case. In the case that $r$ is true, we are given the rule that $r \rightarrow v$. Abiding by this given predicate, we can arrive at the conclusion that $v$ must also be true.
+
+As demonstrated, regardless of whether either $r$ or $p$ is true (or both), it can be concluded that $v$ must be true from the above conclusions. if one were to demonstrate this in a predicate-formative manner, we could say that the statement $$(p \vee r) \rightarrow v$$ is true, thus making $v$ true.
+
+
+\section{Problem 2}
+You meet four people on the Island of Knights and Knaves. Given the following statements they make, determine for each individual whether they are a knight or a knave. Show your reasoning. (Knights' statements are always true and knaves' statements are always false, but consider each utterance as a single (possibly compound) statement, so if a knave's statement is a conjunction, then at least one of the conjuncts must be false, but other conjuncts may be true). 
+
+\begin{itemize}
+    \item A: I am a knight and C is a knave.
+    \item B: A is a knave.
+    \item C: There is only one knight and it is not me.
+    \item D: A and myself are the only knights among us.
+\end{itemize}
+
+
+\subsection{solution}
+Let us assume that B is a knight. We can conclude from this that A is a knave. As A says that A is a knight and C is a knave, we can further derive that C is a knight. However, C states that there is only one knight and it is not C. 
+We have arrived at a contradicting statement. C, despite being a knight in this scenario, is saying something that conflicts with our established conclusions.
+
+However, let us entertain A's compound statement, that A being a knight is false, but C being a knave is true (we cannot assume the inverse in this scenario). We can conclude that there is either multiple knights or that C is not a knight, or both. Seeing as C must be a knave, the only possible true predicate in this compound statement is that there are multiple knights. 
+
+We thus arrive at the conclusion that D must be a knight. However, D says a compound statement that D \emph{AND} A are knights. Since both of these things must be true, and that in this scenario, A must be a knave due to B's assumed knighthood and statements, we are forced to conclude that B cannot be a knight. 
+
+
+Now, let us assume that B is a knave. We can conclude that A is a knight. A declares themselves a knight (true) and C is a knave. C says there is only one knight, and it is not C. The latter half already having been proven true, we can turn to the former and say that D is the only remaining option as the other knight. D's statement agrees with this, saying A and D are the only knights; a conclusion that reasons well with our arrived conclusion.
+
+Thus, A and D are knights 
+\section{Problem 3}
+Let $P$ be the set of players, $T$ be the set of professional teams, and $C$ be the set of college teams. Let $M(x, y)$  be the predicate "player $x$ plays for pro team $y$" and $N(x, y)$ be the predicate "player $x$ played for college team $y$"
+
+Write each of the following in predicate logic. Be sure to indicate the domain of each quantified variable using $P, T,$ or $C.$ Assume that the specific nouns mentioned are members of the appropriate sets.
+
+\begin{itemize}
+    \item No player played for Harvard. [note: Harvard is a college team]
+    \item Every player who plays for Golden State played for Virginia. [note: Golden State is a pro team and Virginia is a college team]
+    \item Some player didn't play for any college team.
+    \item For every college team, there is a player who played for them and plays for a pro team.
+    \item Every player played for a unique college team. [note: use logical connectives, the predicates defined above, and the two standard quantifiers $\forall$ and $\exists$; you may also use $=$ (which is really a two-place predicate written using infix notation rather than function notation, so $x=y$ can be thought of as the predicate $=(x, y)$ meaning "$x$ and $y$ are the same element")]
+\end{itemize}
+
+\subsection{solution}
+
+
+\noindent
+\begin{tabularx}{\textwidth}{|X|X|X|}
+
+\hline
+statement
+& statement
+& domain
+\\ \hline
+
+
+\hline
+No player played for Harvard. 
+{\small [note: Harvard is a college team]} 
+& $\neg\forall x [ N(x, harvard)]$
+& $x \in P$
+\\ \hline
+
+Every player who plays for Golden State played for Virginia. 
+{\small [note: Golden State is a pro team and Virginia is a college team]} 
+& $\forall x [M(x, Golden State) \rightarrow N(x, Virginia)]$
+& $x \in P$
+\\ \hline
+
+Some player didn't play for any college team. 
+& $\exists x \forall y[N(x, y)]$
+& $x \in P, y \in C$
+\\ \hline
+
+For every college team, there is a player who played for them and plays for a pro team. 
+& $\exists x \forall y \exists z[ N(x, y) \wedge M(x, z)]$
+& $x \in P, y \in C, z \in T$
+\\ \hline
+
+Every player played for a unique college team. 
+{\small [note: use logical connectives, the predicates defined above, and the two standard quantifiers $\forall$ and $\exists$; you may also use $=$ (which is really a two-place predicate written using infix notation rather than function notation, so $x=y$ can be thought of as the predicate $=(x, y)$ meaning ``$x$ and $y$ are the same element'')]}
+& $\forall x \exists y[(N(x, y) \wedge \neg N(z, y)) \vee \neg (x = z)]$
+& $x \in P, z \in P, y \in C$
+\\ \hline
+\end{tabularx}
+
+note that this table notation is for ease of reading
+
+\end{document}
