@@ -37,12 +37,14 @@
     pointer-events: none;
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 100% 100%;
 }
 
 .parallax__layer--base {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     z-index: 4;
+    background-size: 100% 100%;
 }
 
 .parallax__layer--back {
@@ -253,13 +255,13 @@ figure img {
 }
 
 figure img[src*="hkgp"] {
-    width: 26.84vw;
+    width: 24vw;
     height: auto;
     max-width: 100%;
 }
 
 figure img[src*="origp"] {
-    width: 26.84vw;
+    width: 24vw;
     height: auto;
     max-width: 100%;
 }
@@ -279,7 +281,7 @@ figure img[src*="jaden"] {
 
 img[src*="zote"] {
     align-self: center;
-    width: 38.738vw;
+    width: 37vw;
     height: auto;
     max-width: 100%;
 }
