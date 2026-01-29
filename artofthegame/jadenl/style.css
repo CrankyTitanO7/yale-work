@@ -155,7 +155,7 @@ html {
 
 body {
     font: 100% / 1.3vw;
-    font-size: .7rem;
+    font-size: .5rem;
 }
 
 * {
@@ -301,6 +301,7 @@ img[src*="dan"] {
     width: 22vw;
     height: auto;
     max-width: 100%;
+    margin-bottom:-3%;
 }
 
 img[src*="bgbgbg"] {
@@ -308,6 +309,7 @@ img[src*="bgbgbg"] {
     width: 24.3vw;
     height: auto;
     max-width: 100%;
+    margin-bottom:-3%;
 }
 
 img[src*="hkstart"] {
