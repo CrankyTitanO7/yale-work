@@ -131,6 +131,16 @@
     background-position: center;
 }
 
+#group8 {
+    z-index: 4; /* slide over group 7 */
+}
+#group8 .parallax__layer--base {
+    /* background-image: url("fg.png"); */
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
 body,
 html {
     font-family: "EB Garamond", serif;
@@ -286,6 +296,27 @@ img[src*="zote"] {
     max-width: 100%;
 }
 
+img[src*="dan"] {
+    align-self: center;
+    width: 22vw;
+    height: auto;
+    max-width: 100%;
+}
+
+img[src*="bgbgbg"] {
+    align-self: center;
+    width: 24.3vw;
+    height: auto;
+    max-width: 100%;
+}
+
+img[src*="hkstart"] {
+    align-self: center;
+    width: 13.3vw;
+    height: auto;
+    max-width: 100%;
+}
+
 /* use this if you need to specify which image */
 
 /* figure img[src*="garden"] {
@@ -379,6 +410,8 @@ a {
 
 figcaption {
     font-size: medium;
+    font-family: "EB Garamond";
+    margin-bottom:3%;
 }
 
 .holographic-container {
@@ -493,4 +526,24 @@ figcaption {
 
 li {
     font-size: 75%;
+}
+
+#statementino {
+    display:flex;
+    align-self:center;
+    flex: 1 0;
+    align-content:center;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+}
+#statementino > * {
+    margin:.4em;
+}
+
+
+#writ {
+    text-align:justify;
+    margin-left: 2%;
+    margin-right:2%;
 }
