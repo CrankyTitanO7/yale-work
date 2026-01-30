@@ -26,7 +26,7 @@ all: main test
 # The $^ symbol is a special variable in Makefiles that represents all the prerequisites of the target.
 # The -c flag tells the compiler to compile the source files into object files, but not to link them.
 
-main: main.o mod.o factorial.o power.o
+main: main.o mod.o factorial.o power.o mathlib.h
 	$(CC) $(CFLAGS) -o $@ $^ 
 
 main.o: main.c mathlib.h
@@ -45,11 +45,11 @@ power.o: power.c mathlib.h
 
 
 # The test program is built from unittest.o, mod.o, factorial.o, and power.o.
-test:  unittest.o mod.o factorial.o power.o
+test:  unittest.o mod.o factorial.o power.o mathlib.h
 	$(CC) $(CFLAGS) -o $@ $^ 
 
-unittest.o: unittest.c
-	$(CC) $(CFLAGS) -c $@ -lm
+unittest.o: unittest.c mathlib.h
+	$(CC) $(CFLAGS) -c $@ $<
 
 
 # Shortcut for executing the main program: Type `make run` to run the main program.
