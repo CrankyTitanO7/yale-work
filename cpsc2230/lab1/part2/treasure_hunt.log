@@ -1,0 +1,3697 @@
++show logging
+logging debugredirect:  off: Debug output will go to both the screen and the log file.
+logging enabled:  on: Logging is enabled.
+logging file:  The current logfile is "treasure_hunt.log".
+logging overwrite:  off: Logging appends to the log file.
+logging redirect:  off: Output will go to both the screen and the log file.
++break main
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Breakpoint 1 at 0x168c: file treasure_hunt.c, line 108.
++run
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 
+During startup program exited with code 126.
++q
++show logging
+logging debugredirect:  off: Debug output will go to both the screen and the log file.
+logging enabled:  on: Logging is enabled.
+logging file:  The current logfile is "treasure_hunt.log".
+logging overwrite:  off: Logging appends to the log file.
+logging redirect:  off: Output will go to both the screen and the log file.
++run
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 2660122) exited with code 01]
++break main
+Breakpoint 1 at 0x55555555568c: file treasure_hunt.c, line 108.
++run
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:108
+warning: 108	treasure_hunt.c: No such file or directory
++step
+count_cargo (count=1) at treasure_hunt.c:9
+9	in treasure_hunt.c
++step
+11	in treasure_hunt.c
++step
+14	in treasure_hunt.c
++step
+main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
+110	in treasure_hunt.c
++step
+walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+41	in treasure_hunt.c
++step
+43	in treasure_hunt.c
++step
+0x00007ffff7c87bf8 in __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/ioputs.c:35
+warning: 35	./libio/ioputs.c: No such file or directory
++step
+__strlen_evex () at ../sysdeps/x86_64/multiarch/strlen-evex-base.S:72
+warning: 72	../sysdeps/x86_64/multiarch/strlen-evex-base.S: No such file or directory
++step
+73	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++q
+Not confirmed.
++q
+Not confirmed.
++step
+74	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+75	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+76	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+77	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+81	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+82	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+83	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+84	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+103	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+104	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+108	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+109	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+110	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+111	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+197	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+198	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+200	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+201	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++step
+__GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/ioputs.c:36
+warning: 36	./libio/ioputs.c: No such file or directory
++step
+39	in ./libio/ioputs.c
++step
+40	in ./libio/ioputs.c
++step
+IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1026
+warning: 1026	./libio/libioP.h: No such file or directory
++step
+__GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
++step
+0x00007ffff7c939f0 in _IO_new_file_xsputn (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, data=0x5555555562e8, n=53) at ./libio/fileops.c:1205
+warning: 1205	./libio/fileops.c: No such file or directory
++step
+1197	in ./libio/fileops.c
++step
+0x00007ffff7c93a03 in _IO_new_file_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/fileops.c:1213
+1213	in ./libio/fileops.c
++step
+1211	in ./libio/fileops.c
++step
+1228	in ./libio/fileops.c
++step
+1244	in ./libio/fileops.c
++step
+IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1025
+warning: 1025	./libio/libioP.h: No such file or directory
++step
+1026	in ./libio/libioP.h
++step
+_IO_new_file_xsputn (n=53, data=<optimized out>, f=<optimized out>) at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
++step
+0x00007ffff7c92e04 in _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=-1) at ./libio/fileops.c:733
+warning: 733	./libio/fileops.c: No such file or directory
++step
+740	in ./libio/fileops.c
++step
+743	in ./libio/fileops.c
++step
+745	in ./libio/fileops.c
++step
+__GI__IO_doallocbuf (fp=fp@entry=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/genops.c:343
+warning: 343	./libio/genops.c: No such file or directory
++step
+344	in ./libio/genops.c
++step
+346	in ./libio/genops.c
++step
+347	in ./libio/genops.c
++step
+IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1026
+warning: 1026	./libio/libioP.h: No such file or directory
++step
+__GI__IO_doallocbuf (fp=fp@entry=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
++step
+__GI__IO_file_doallocate (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/filedoalloc.c:84
+warning: 84	./libio/filedoalloc.c: No such file or directory
++step
+IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1026
+warning: 1026	./libio/libioP.h: No such file or directory
++step
+__GI__IO_file_doallocate (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
++step
+__GI__IO_file_stat (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>, st=0x7fffffffd630) at ./libio/fileops.c:1147
+warning: 1147	./libio/fileops.c: No such file or directory
++step
+1148	in ./libio/fileops.c
++step
+__GI___fstat64 (fd=1, buf=0x7fffffffd630) at ../sysdeps/unix/sysv/linux/fstat64.c:30
+warning: 30	../sysdeps/unix/sysv/linux/fstat64.c: No such file or directory
++step
+39	in ../sysdeps/unix/sysv/linux/fstat64.c
++step
+__GI__IO_file_doallocate (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/filedoalloc.c:86
+warning: 86	./libio/filedoalloc.c: No such file or directory
++step
+91	in ./libio/filedoalloc.c
++step
+__gnu_dev_major (__dev=34832) at ../include/sys/sysmacros.h:47
+warning: 47	../include/sys/sysmacros.h: No such file or directory
++step
+warning: 91	./libio/filedoalloc.c: No such file or directory
++step
+94	in ./libio/filedoalloc.c
++step
+97	in ./libio/filedoalloc.c
++step
+101	in ./libio/filedoalloc.c
++step
+0x00007ffff7cad664 in __GI___libc_malloc (bytes=bytes@entry=1024) at ./malloc/malloc.c:3301
+warning: 3301	./malloc/malloc.c: No such file or directory
++step
+3302	in ./malloc/malloc.c
++step
+ptmalloc_init () at ./malloc/arena.c:264
+warning: 264	./malloc/arena.c: No such file or directory
++step
+ptmalloc_init () at ./malloc/arena.c:262
+262	in ./malloc/arena.c
++step
+270	in ./malloc/arena.c
++step
+tcache_key_initialize () at ./malloc/malloc.c:3143
+warning: 3143	./malloc/malloc.c: No such file or directory
++step
+0x00007ffff7ca9d71 in __getrandom_nocancel_nostatus (flags=<optimized out>, buflen=<optimized out>, buf=<optimized out>) at ../sysdeps/unix/sysv/linux/not-cancel.h:97
+warning: 97	../sysdeps/unix/sysv/linux/not-cancel.h: No such file or directory
++step
+warning: 267	./malloc/arena.c: No such file or directory
++step
+270	in ./malloc/arena.c
++step
+tcache_key_initialize () at ./malloc/malloc.c:3143
+warning: 3143	./malloc/malloc.c: No such file or directory
++step
+__getrandom_nocancel_nostatus (flags=1, buflen=8, buf=0x7ffff7e0a178 <tcache_key>) at ../sysdeps/unix/sysv/linux/not-cancel.h:97
+warning: 97	../sysdeps/unix/sysv/linux/not-cancel.h: No such file or directory
++step
+ptmalloc_init () at ./malloc/arena.c:292
+warning: 292	./malloc/arena.c: No such file or directory
++step
+296	in ./malloc/arena.c
++run
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:108
+warning: 108	treasure_hunt.c: No such file or directory
++step
+count_cargo (count=1) at treasure_hunt.c:9
+9	in treasure_hunt.c
++print argc
+No symbol "argc" in current context.
++display argc 
+No symbol "argc" in current context.
++display argv
+No symbol "argv" in current context.
++bt
+#0  count_cargo (count=1) at treasure_hunt.c:9
+#1  0x0000555555555696 in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:108
++print
+The history is empty.
++display
++display
++s
+11	in treasure_hunt.c
++print argc
+No symbol "argc" in current context.
++print argv
+No symbol "argv" in current context.
++print
+The history is empty.
++print arrrrgv
+No symbol "arrrrgv" in current context.
++print arg
+No symbol "arg" in current context.
++d
++display
++display argc
+No symbol "argc" in current context.
++s
+14	in treasure_hunt.c
++print
+The history is empty.
++display
++print argc
+No symbol "argc" in current context.
++print argv
+No symbol "argv" in current context.
++print argv[]
+No symbol "argv" in current context.
++print argv[]
+No symbol "argv" in current context.
++s
+main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
+110	in treasure_hunt.c
++print argc
+$1 = 1
++print argv
+$2 = (char **) 0x7fffffffd958
++display argv
+1: argv = (char **) 0x7fffffffd958
++s
+walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+41	in treasure_hunt.c
++break walk_the_plank
+Breakpoint 2 at 0x5555555553b5: file treasure_hunt.c, line 41.
++backtrace
+#0  walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+#1  0x00005555555556ae in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
++backtrace
+#0  walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+#1  0x00005555555556ae in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
++s
+43	in treasure_hunt.c
++print argc
+No symbol "argc" in current context.
++print argv
+No symbol "argv" in current context.
++s
+0x00007ffff7c87bf8 in __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/ioputs.c:35
+warning: 35	./libio/ioputs.c: No such file or directory
++break __GI__IO_puts
+Breakpoint 3 at 0x7ffff7c87be0: file ./libio/ioputs.c, line 33.
++bt
+#0  0x00007ffff7c87bf8 in __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/ioputs.c:35
+#1  0x00005555555553cd in walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:43
+#2  0x00005555555556ae in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
++print argv
+No symbol "argv" in current context.
++print argc
+No symbol "argc" in current context.
++s
+__strlen_evex () at ../sysdeps/x86_64/multiarch/strlen-evex-base.S:72
+warning: 72	../sysdeps/x86_64/multiarch/strlen-evex-base.S: No such file or directory
++print __strlen_evex()
+'__strlen_evex' has unknown return type; cast the call to its declared return type
++print argv
+No symbol "argv" in current context.
++s
+73	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+74	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+75	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+76	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+77	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+81	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+82	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+83	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+84	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+103	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+104	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+108	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+109	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+110	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+111	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+197	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+198	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+200	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+201	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+__GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/ioputs.c:36
+warning: 36	./libio/ioputs.c: No such file or directory
++print str
+$3 = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++print key
+No symbol "key" in current context.
++bt
+#0  __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/ioputs.c:36
+#1  0x00005555555553cd in walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:43
+#2  0x00005555555556ae in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
++print key
+No symbol "key" in current context.
++s
+39	in ./libio/ioputs.c
++s
+40	in ./libio/ioputs.c
++s
+IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1026
+warning: 1026	./libio/libioP.h: No such file or directory
++print vtable
+$4 = (const struct _IO_jump_t *) 0x7ffff7e02030 <_IO_file_jumps>
++break IO_validate_vtable
+Breakpoint 4 at 0x7ffff7c60b20: IO_validate_vtable. (97 locations)
++print <_IO_file_jumps>
+A syntax error in expression, near `<_IO_file_jumps>'.
++s
+__GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
++print str
+$5 = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++break __GI__IO_puts
+Note: breakpoint 3 also set at pc 0x7ffff7c87be0.
+Breakpoint 5 at 0x7ffff7c87be0: file ./libio/ioputs.c, line 33.
++bt
+#0  __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/libioP.h:1030
+#1  0x00005555555553cd in walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:43
+#2  0x00005555555556ae in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
++s
+0x00007ffff7c939f0 in _IO_new_file_xsputn (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, data=0x5555555562e8, n=53) at ./libio/fileops.c:1205
+warning: 1205	./libio/fileops.c: No such file or directory
++print f
+$6 = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++print data
+$7 = (const void *) 0x5555555562e8
++print n
+$8 = 53
++bt
+#0  0x00007ffff7c939f0 in _IO_new_file_xsputn (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, data=0x5555555562e8, n=53) at ./libio/fileops.c:1205
+#1  0x00007ffff7c87c5d in __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/libioP.h:1030
+#2  0x00005555555553cd in walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:43
+#3  0x00005555555556ae in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
++break _IO_new_file_xsputn
+Breakpoint 6 at 0x7ffff7c939e0: _IO_new_file_xsputn. (2 locations)
++s
+
+Breakpoint 6.2, 0x00007ffff7c93a03 in _IO_new_file_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/fileops.c:1213
+1213	in ./libio/fileops.c
++print n
+$9 = <optimized out>
++print data
+$10 = <optimized out>
++s
+1211	in ./libio/fileops.c
++s
+1228	in ./libio/fileops.c
++s
+1244	in ./libio/fileops.c
++s
+
+Breakpoint 4.70, IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1025
+warning: 1025	./libio/libioP.h: No such file or directory
++print vtable
+$11 = (const struct _IO_jump_t *) 0x7ffff7e02030 <_IO_file_jumps>
++print vtable
+$12 = (const struct _IO_jump_t *) 0x7ffff7e02030 <_IO_file_jumps>
++print vtable
+$13 = (const struct _IO_jump_t *) 0x7ffff7e02030 <_IO_file_jumps>
++s
+1026	in ./libio/libioP.h
++s
+_IO_new_file_xsputn (n=53, data=<optimized out>, f=<optimized out>) at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
++s
+0x00007ffff7c92e04 in _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=-1) at ./libio/fileops.c:733
+warning: 733	./libio/fileops.c: No such file or directory
++break _IO_new_file_overflow
+Breakpoint 7 at 0x7ffff7c92df0: file ./libio/fileops.c, line 732.
++print f
+$14 = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++print ch
+$15 = -1
++print ch
+$16 = -1
++s
+740	in ./libio/fileops.c
++s
+743	in ./libio/fileops.c
++s
+745	in ./libio/fileops.c
++s
+__GI__IO_doallocbuf (fp=fp@entry=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/genops.c:343
+warning: 343	./libio/genops.c: No such file or directory
++print fp
+$17 = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++print fp@entry
+$18 = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++break __GI__IO_doallocbuf
+Breakpoint 8 at 0x7ffff7c954d0: __GI__IO_doallocbuf. (2 locations)
++bt
+#0  __GI__IO_doallocbuf (fp=fp@entry=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/genops.c:343
+#1  0x00007ffff7c92f90 in _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=-1) at ./libio/fileops.c:745
+#2  0x00007ffff7c93aaf in _IO_new_file_xsputn (n=53, data=<optimized out>, f=<optimized out>) at ./libio/libioP.h:1030
+#3  _IO_new_file_xsputn (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, data=<optimized out>, n=53) at ./libio/fileops.c:1197
+#4  0x00007ffff7c87c5d in __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/libioP.h:1030
+#5  0x00005555555553cd in walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:43
+#6  0x00005555555556ae in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
++s
+344	in ./libio/genops.c
++s
+346	in ./libio/genops.c
++s
+347	in ./libio/genops.c
++s
+
+Breakpoint 4.84, IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1026
+warning: 1026	./libio/libioP.h: No such file or directory
++print vtable
+$19 = (const struct _IO_jump_t *) 0x7ffff7e02030 <_IO_file_jumps>
++print vtable
+$20 = (const struct _IO_jump_t *) 0x7ffff7e02030 <_IO_file_jumps>
++s
+__GI__IO_doallocbuf (fp=fp@entry=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
++print fp@entry
+$21 = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+__GI__IO_file_doallocate (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/filedoalloc.c:84
+warning: 84	./libio/filedoalloc.c: No such file or directory
++print fp
+$22 = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++break __GI__IO_file_doallocate
+Breakpoint 9 at 0x7ffff7c85120: file ./libio/filedoalloc.c, line 78.
++s
+
+Breakpoint 4.5, IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1026
+warning: 1026	./libio/libioP.h: No such file or directory
++s
+__GI__IO_file_doallocate (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
++s
+__GI__IO_file_stat (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>, st=0x7fffffffd630) at ./libio/fileops.c:1147
+warning: 1147	./libio/fileops.c: No such file or directory
++s
+1148	in ./libio/fileops.c
++s
+__GI___fstat64 (fd=1, buf=0x7fffffffd630) at ../sysdeps/unix/sysv/linux/fstat64.c:30
+warning: 30	../sysdeps/unix/sysv/linux/fstat64.c: No such file or directory
++print fd
+$23 = 1
++print buf
+$24 = (struct stat64 *) 0x7fffffffd630
++s
+39	in ../sysdeps/unix/sysv/linux/fstat64.c
++n
+__GI__IO_file_doallocate (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/filedoalloc.c:86
+warning: 86	./libio/filedoalloc.c: No such file or directory
++n
+91	in ./libio/filedoalloc.c
++n
+94	in ./libio/filedoalloc.c
++n
+97	in ./libio/filedoalloc.c
++n
+101	in ./libio/filedoalloc.c
++n
+102	in ./libio/filedoalloc.c
++n
+104	in ./libio/filedoalloc.c
++n
+105	in ./libio/filedoalloc.c
++n
+_IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=-1) at ./libio/fileops.c:746
+warning: 746	./libio/fileops.c: No such file or directory
++n
+755	in ./libio/fileops.c
++n
+764	in ./libio/fileops.c
++n
+766	in ./libio/fileops.c
++n
+767	in ./libio/fileops.c
++n
+768	in ./libio/fileops.c
++n
+772	in ./libio/fileops.c
++n
+773	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+776	in ./libio/fileops.c
++n
+_IO_new_do_write (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>, data=0x5555555592a0 "", to_do=0) at ./libio/fileops.c:424
+424	in ./libio/fileops.c
++print data
+$25 = 0x5555555592a0 ""
++print to_do
+$26 = 0
++print fp
+$27 = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++n
+425	in ./libio/fileops.c
++n
+_IO_new_file_xsputn (n=53, data=<optimized out>, f=<optimized out>) at ./libio/fileops.c:1250
+1250	in ./libio/fileops.c
++n
+1251	in ./libio/fileops.c
++n
+1253	in ./libio/fileops.c
++n
+1264	in ./libio/fileops.c
++n
+1265	in ./libio/fileops.c
++n
+
+Breakpoint 4.86, 0x00007ffff7c9562a in IO_validate_vtable (vtable=<optimized out>) at ./libio/libioP.h:1025
+warning: 1025	./libio/libioP.h: No such file or directory
++n
+warning: 379	./libio/genops.c: No such file or directory
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=89) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=101) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=114) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=32) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=96) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=97) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=114) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=114) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=114) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=114) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=103) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=99) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=96) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=32) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++n
+778	in ./libio/fileops.c
++n
+781	in ./libio/fileops.c
++n
+782	in ./libio/fileops.c
++n
+787	in ./libio/fileops.c
++n
+__GI__IO_default_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/genops.c:401
+warning: 401	./libio/genops.c: No such file or directory
++n
+376	in ./libio/genops.c
++n
+379	in ./libio/genops.c
++n
+399	in ./libio/genops.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=105) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++n
+733	in ./libio/fileops.c
++n
+740	in ./libio/fileops.c
++n
+775	in ./libio/fileops.c
++run
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:108
+warning: 108	treasure_hunt.c: No such file or directory
+1: argv = (char **) 0x7fffffffd958
++run 0 53 
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 0 53
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=3, argv=0x7fffffffd948) at treasure_hunt.c:108
+108	in treasure_hunt.c
+1: argv = (char **) 0x7fffffffd948
++s
+count_cargo (count=3) at treasure_hunt.c:9
+9	in treasure_hunt.c
++break count_cargo
+Breakpoint 10 at 0x555555555274: file treasure_hunt.c, line 9.
++display count
+2: count = 3
++s
+11	in treasure_hunt.c
+2: count = 3
++s
+14	in treasure_hunt.c
+2: count = 3
++s
+main (argc=3, argv=0x7fffffffd948) at treasure_hunt.c:110
+110	in treasure_hunt.c
+1: argv = (char **) 0x7fffffffd948
++display argc argv
+A syntax error in expression, near `argv'.
++display argc
+3: argc = 3
++display argv
+4: argv = (char **) 0x7fffffffd948
++break main
+Note: breakpoint 1 also set at pc 0x55555555568c.
+Breakpoint 11 at 0x55555555568c: file treasure_hunt.c, line 108.
++s
+
+Breakpoint 2, walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+41	in treasure_hunt.c
++display key
+5: key = 0
++display message
+6: message = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++s
+43	in treasure_hunt.c
+5: key = 0
+6: message = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++s
+
+Breakpoint 3, __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/ioputs.c:33
+warning: 33	./libio/ioputs.c: No such file or directory
++display str
+7: str = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++s
+35	in ./libio/ioputs.c
+7: str = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++s
+__strlen_evex () at ../sysdeps/x86_64/multiarch/strlen-evex-base.S:72
+warning: 72	../sysdeps/x86_64/multiarch/strlen-evex-base.S: No such file or directory
++s
+73	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+74	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+75	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+76	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+77	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+81	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+82	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+83	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+84	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+103	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+104	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+108	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+109	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+110	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+111	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+197	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+198	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+200	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+201	in ../sysdeps/x86_64/multiarch/strlen-evex-base.S
++s
+__GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/ioputs.c:36
+warning: 36	./libio/ioputs.c: No such file or directory
+7: str = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++s
+39	in ./libio/ioputs.c
+7: str = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++s
+
+Breakpoint 4.13, IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1026
+warning: 1026	./libio/libioP.h: No such file or directory
+7: str = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++display vtable
+8: vtable = (const struct _IO_jump_t *) 0x7ffff7e02030 <_IO_file_jumps>
++s
+__GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
+7: str = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++s
+
+Breakpoint 6.1, _IO_new_file_xsputn (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, data=0x5555555562e8, n=53) at ./libio/fileops.c:1198
+warning: 1198	./libio/fileops.c: No such file or directory
++display f
+9: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++display data
+10: data = (const void *) 0x5555555562e8
++display n
+11: n = 53
++s
+1204	in ./libio/fileops.c
+9: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+10: data = (const void *) 0x5555555562e8
+11: n = 53
++s
+
+Breakpoint 6.2, 0x00007ffff7c93a03 in _IO_new_file_xsputn (n=<optimized out>, data=<optimized out>, f=<optimized out>) at ./libio/fileops.c:1213
+1213	in ./libio/fileops.c
+9: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+10: data = (const void *) 0x5555555562e8
+11: n = 53
++s
+1211	in ./libio/fileops.c
+9: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+10: data = (const void *) 0x5555555562e8
+11: n = 53
++s
+1228	in ./libio/fileops.c
+9: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+10: data = (const void *) 0x5555555562e8
+11: n = 53
++s
+1244	in ./libio/fileops.c
+9: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+10: data = <optimized out>
+11: n = 53
++s
+
+Breakpoint 4.70, IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1025
+warning: 1025	./libio/libioP.h: No such file or directory
+9: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+10: data = <optimized out>
+11: n = 53
++s
+1026	in ./libio/libioP.h
+9: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+10: data = <optimized out>
+11: n = 53
++s
+_IO_new_file_xsputn (n=53, data=<optimized out>, f=<optimized out>) at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
+9: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+10: data = <optimized out>
+11: n = 53
++s
+
+Breakpoint 7, _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=-1) at ./libio/fileops.c:732
+warning: 732	./libio/fileops.c: No such file or directory
++display f
+12: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++display ch
+13: ch = -1
++s
+733	in ./libio/fileops.c
+12: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+13: ch = -1
++s
+740	in ./libio/fileops.c
+12: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+13: ch = -1
++s
+743	in ./libio/fileops.c
+12: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+13: ch = -1
++s
+745	in ./libio/fileops.c
+12: f = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+13: ch = -1
++s
+
+Breakpoint 8.1, __GI__IO_doallocbuf (fp=fp@entry=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/genops.c:343
+warning: 343	./libio/genops.c: No such file or directory
++display fp
+14: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++display fp@entry
+15: fp@entry = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++bt
+#0  __GI__IO_doallocbuf (fp=fp@entry=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/genops.c:343
+#1  0x00007ffff7c92f90 in _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=-1) at ./libio/fileops.c:745
+#2  0x00007ffff7c93aaf in _IO_new_file_xsputn (n=53, data=<optimized out>, f=<optimized out>) at ./libio/libioP.h:1030
+#3  _IO_new_file_xsputn (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, data=<optimized out>, n=53) at ./libio/fileops.c:1197
+#4  0x00007ffff7c87c5d in __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/libioP.h:1030
+#5  0x00005555555553cd in walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:43
+#6  0x00005555555556ae in main (argc=3, argv=0x7fffffffd948) at treasure_hunt.c:110
++s
+344	in ./libio/genops.c
+14: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+15: fp@entry = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+346	in ./libio/genops.c
+14: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+15: fp@entry = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+347	in ./libio/genops.c
+14: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+15: fp@entry = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+
+Breakpoint 4.84, IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1026
+warning: 1026	./libio/libioP.h: No such file or directory
+14: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+15: fp@entry = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++display vtable
+16: vtable = (const struct _IO_jump_t *) 0x7ffff7e02030 <_IO_file_jumps>
++s
+__GI__IO_doallocbuf (fp=fp@entry=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
+14: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+15: fp@entry = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+
+Breakpoint 9, __GI__IO_file_doallocate (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/filedoalloc.c:78
+warning: 78	./libio/filedoalloc.c: No such file or directory
+15: fp@entry = <optimized out>
++display fp
+17: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+84	in ./libio/filedoalloc.c
+15: fp@entry = <optimized out>
+17: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+
+Breakpoint 4.5, IO_validate_vtable (vtable=0x7ffff7e02030 <_IO_file_jumps>) at ./libio/libioP.h:1026
+warning: 1026	./libio/libioP.h: No such file or directory
+15: fp@entry = <optimized out>
+17: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+__GI__IO_file_doallocate (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/libioP.h:1030
+1030	in ./libio/libioP.h
+15: fp@entry = <optimized out>
+17: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+__GI__IO_file_stat (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>, st=0x7fffffffd620) at ./libio/fileops.c:1147
+warning: 1147	./libio/fileops.c: No such file or directory
+15: fp@entry = <optimized out>
++s
+1148	in ./libio/fileops.c
+15: fp@entry = <optimized out>
++s
+__GI___fstat64 (fd=1, buf=0x7fffffffd620) at ../sysdeps/unix/sysv/linux/fstat64.c:30
+warning: 30	../sysdeps/unix/sysv/linux/fstat64.c: No such file or directory
+15: fp@entry = <optimized out>
++d fd
++display fd
+18: fd = 1
++display buf
+19: buf = (struct stat64 *) 0x7fffffffd620
++s
+39	in ../sysdeps/unix/sysv/linux/fstat64.c
+15: fp@entry = <optimized out>
+18: fd = 1
+19: buf = (struct stat64 *) 0x7fffffffd620
++s
+__GI__IO_file_doallocate (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/filedoalloc.c:86
+warning: 86	./libio/filedoalloc.c: No such file or directory
+15: fp@entry = <optimized out>
+17: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+91	in ./libio/filedoalloc.c
+15: fp@entry = <optimized out>
+17: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+__gnu_dev_major (__dev=34832) at ../include/sys/sysmacros.h:47
+warning: 47	../include/sys/sysmacros.h: No such file or directory
+15: fp@entry = <optimized out>
+17: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++display __dev
+20: __dev = 34832
++s
+warning: 91	./libio/filedoalloc.c: No such file or directory
+15: fp@entry = <optimized out>
+17: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
+20: __dev = <optimized out>
++s
+94	in ./libio/filedoalloc.c
+15: fp@entry = <optimized out>
+17: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+97	in ./libio/filedoalloc.c
+15: fp@entry = <optimized out>
+17: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+101	in ./libio/filedoalloc.c
+15: fp@entry = <optimized out>
+17: fp = (FILE *) 0x7ffff7e045c0 <_IO_2_1_stdout_>
++s
+0x00007ffff7cad664 in __GI___libc_malloc (bytes=bytes@entry=1024) at ./malloc/malloc.c:3301
+warning: 3301	./malloc/malloc.c: No such file or directory
+15: fp@entry = <optimized out>
++display bytes
+21: bytes = 1024
++s
+3302	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
+21: bytes = 1024
++s
+ptmalloc_init () at ./malloc/arena.c:264
+warning: 264	./malloc/arena.c: No such file or directory
+15: fp@entry = <optimized out>
+21: bytes = 1024
++s
+ptmalloc_init () at ./malloc/arena.c:262
+262	in ./malloc/arena.c
+15: fp@entry = <optimized out>
++s
+270	in ./malloc/arena.c
+15: fp@entry = <optimized out>
++s
+tcache_key_initialize () at ./malloc/malloc.c:3143
+warning: 3143	./malloc/malloc.c: No such file or directory
+15: fp@entry = <optimized out>
++s
+0x00007ffff7ca9d71 in __getrandom_nocancel_nostatus (flags=<optimized out>, buflen=<optimized out>, buf=<optimized out>) at ../sysdeps/unix/sysv/linux/not-cancel.h:97
+warning: 97	../sysdeps/unix/sysv/linux/not-cancel.h: No such file or directory
+15: fp@entry = <optimized out>
++break 
+Breakpoint 12 at 0x7ffff7ca9d71: file ../sysdeps/unix/sysv/linux/not-cancel.h, line 97.
++bt
+#0  0x00007ffff7ca9d71 in __getrandom_nocancel_nostatus (flags=<optimized out>, buflen=<optimized out>, buf=<optimized out>) at ../sysdeps/unix/sysv/linux/not-cancel.h:97
+#1  tcache_key_initialize () at ./malloc/malloc.c:3143
+#2  ptmalloc_init () at ./malloc/arena.c:270
+#3  0x00007ffff7cad865 in ptmalloc_init () at ./malloc/arena.c:264
+#4  __GI___libc_malloc (bytes=bytes@entry=1024) at ./malloc/malloc.c:3302
+#5  0x00007ffff7c851b5 in __GI__IO_file_doallocate (fp=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/filedoalloc.c:101
+#6  0x00007ffff7c95524 in __GI__IO_doallocbuf (fp=fp@entry=0x7ffff7e045c0 <_IO_2_1_stdout_>) at ./libio/libioP.h:1030
+#7  0x00007ffff7c92f90 in _IO_new_file_overflow (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, ch=-1) at ./libio/fileops.c:745
+#8  0x00007ffff7c93aaf in _IO_new_file_xsputn (n=53, data=<optimized out>, f=<optimized out>) at ./libio/libioP.h:1030
+#9  _IO_new_file_xsputn (f=0x7ffff7e045c0 <_IO_2_1_stdout_>, data=<optimized out>, n=53) at ./libio/fileops.c:1197
+#10 0x00007ffff7c87c5d in __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/libioP.h:1030
+#11 0x00005555555553cd in walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:43
+#12 0x00005555555556ae in main (argc=3, argv=0x7fffffffd948) at treasure_hunt.c:110
++s
+warning: 267	./malloc/arena.c: No such file or directory
+15: fp@entry = <optimized out>
++s
+270	in ./malloc/arena.c
+15: fp@entry = <optimized out>
++s
+tcache_key_initialize () at ./malloc/malloc.c:3143
+warning: 3143	./malloc/malloc.c: No such file or directory
+15: fp@entry = <optimized out>
++s
+__getrandom_nocancel_nostatus (flags=1, buflen=8, buf=0x7ffff7e0a178 <tcache_key>) at ../sysdeps/unix/sysv/linux/not-cancel.h:97
+warning: 97	../sysdeps/unix/sysv/linux/not-cancel.h: No such file or directory
+15: fp@entry = <optimized out>
++s
+ptmalloc_init () at ./malloc/arena.c:292
+warning: 292	./malloc/arena.c: No such file or directory
+15: fp@entry = <optimized out>
++s
+296	in ./malloc/arena.c
+15: fp@entry = <optimized out>
++s
+298	in ./malloc/arena.c
+15: fp@entry = <optimized out>
++s
+malloc_init_state (av=0x7ffff7e03ac0 <main_arena>) at ./malloc/malloc.c:1946
+warning: 1946	./malloc/malloc.c: No such file or directory
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1946	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++s
+1949	in ./malloc/malloc.c
+15: fp@entry = <optimized out>
++run 1 2 3 4 5
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 1 2 3 4 5
+Warning:
+Cannot insert breakpoint 12.
+Cannot access memory at address 0x7ffff7ca9d71
+
++c
+Continuing.
+Warning:
+Cannot insert breakpoint 12.
+Cannot access memory at address 0x7ffff7ca9d71
+
+Command aborted.
++c
+Continuing.
+Warning:
+Cannot insert breakpoint 12.
+Cannot access memory at address 0x7ffff7ca9d71
+
+Command aborted.
++c
+Continuing.
+Warning:
+Cannot insert breakpoint 12.
+Cannot access memory at address 0x7ffff7ca9d71
+
+Command aborted.
+Quit
++q
++show logging
+logging debugredirect:  off: Debug output will go to both the screen and the log file.
+logging enabled:  on: Logging is enabled.
+logging file:  The current logfile is "treasure_hunt.log".
+logging overwrite:  off: Logging appends to the log file.
+logging redirect:  off: Output will go to both the screen and the log file.
++break main
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Breakpoint 1 at 0x168c: file treasure_hunt.c, line 108.
++set debuginfod enabled on
++break main
+Note: breakpoint 1 also set at pc 0x168c.
+Breakpoint 2 at 0x168c: file treasure_hunt.c, line 108.
++info break
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x000000000000168c in main at treasure_hunt.c:108
+2       breakpoint     keep y   0x000000000000168c in main at treasure_hunt.c:108
++del 2
++n
+The program is not being run.
++run 
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 
+Downloading separate debug info for system-supplied DSO at 0x7ffff7fc3000
+[###                                                                                                                                                          ]                                                                                                                                                                 [Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Downloading source file /home/accts/adw58/26sp/223/labs/lab1-make-gdb/treasure_hunt_solution/treasure_hunt.c
+[###                                                                                                                                                          ]                                                                                                                                                                 
+Breakpoint 1, main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:108
+warning: 108	treasure_hunt.c: No such file or directory
++n
+110	in treasure_hunt.c
++n
+[Inferior 1 (process 2667824) exited with code 01]
++s
+The program is not being run.
++run
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:108
+108	in treasure_hunt.c
++s
+count_cargo (count=1) at treasure_hunt.c:9
+9	in treasure_hunt.c
++rs
+Target multi-thread does not support this command.
++display argc
+No symbol "argc" in current context.
++display count
+1: count = 1
++break count_cargo
+Breakpoint 3 at 0x555555555274: file treasure_hunt.c, line 9.
++bt
+#0  count_cargo (count=1) at treasure_hunt.c:9
+#1  0x0000555555555696 in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:108
++s
+11	in treasure_hunt.c
+1: count = 1
++s
+14	in treasure_hunt.c
+1: count = 1
++s
+main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
+110	in treasure_hunt.c
++display argc
+2: argc = 1
++display argv
+3: argv = (char **) 0x7fffffffd958
++s
+walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+41	in treasure_hunt.c
++break walk_the_plank
+Breakpoint 4 at 0x5555555553b5: file treasure_hunt.c, line 41.
++bt
+#0  walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+#1  0x00005555555556ae in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
++display key
+4: key = 0
++display message
+5: message = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++s
+43	in treasure_hunt.c
+4: key = 0
+5: message = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++s
+Download failed: Invalid argument.  Continuing without source file ./libio/./libio/ioputs.c.
+0x00007ffff7c87bf8 in __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/ioputs.c:35
+warning: 35	./libio/ioputs.c: No such file or directory
++bt
+#0  0x00007ffff7c87bf8 in __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/ioputs.c:35
+#1  0x00005555555553cd in walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:43
+#2  0x00005555555556ae in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
++n
+36	in ./libio/ioputs.c
++n
+39	in ./libio/ioputs.c
++n
+40	in ./libio/ioputs.c
++n
+Download failed: Invalid argument.  Continuing without source file ./libio/./libio/libioP.h.
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+Download failed: Invalid argument.  Continuing without source file ./libio/./libio/ioputs.c.
+warning: 42	./libio/ioputs.c: No such file or directory
++n
+36	in ./libio/ioputs.c
++n
+walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:49
+warning: 49	treasure_hunt.c: No such file or directory
+4: key = 0
+5: message = 0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!"
++bt
+#0  walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:49
+#1  0x00005555555556ae in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
++s
+Download failed: Invalid argument.  Continuing without source file ./stdlib/./stdlib/exit.c.
+__GI_exit (status=1) at ./stdlib/exit.c:137
+warning: 137	./stdlib/exit.c: No such file or directory
++n
+138	in ./stdlib/exit.c
++n
+[Inferior 1 (process 2667986) exited with code 01]
++n
+The program is not being run.
++run 1 2 3 4 5
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 1 2 3 4 5
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd928) at treasure_hunt.c:108
+warning: 108	treasure_hunt.c: No such file or directory
+2: argc = 6
+3: argv = (char **) 0x7fffffffd928
++s
+
+Breakpoint 3, count_cargo (count=6) at treasure_hunt.c:9
+9	in treasure_hunt.c
+1: count = 6
++s
+13	in treasure_hunt.c
+1: count = 6
++s
+14	in treasure_hunt.c
+1: count = 6
++s
+main (argc=6, argv=0x7fffffffd928) at treasure_hunt.c:112
+112	in treasure_hunt.c
+2: argc = 6
+3: argv = (char **) 0x7fffffffd928
++s
+decrypt_treasure_map (argv=0x7fffffffd928) at treasure_hunt.c:53
+53	in treasure_hunt.c
++break decrypt_treasure_map
+Breakpoint 5 at 0x55555555540c: file treasure_hunt.c, line 53.
++display argv
+6: argv = (char **) 0x7fffffffd928
++s
+54	in treasure_hunt.c
+6: argv = (char **) 0x7fffffffd928
++s
+55	in treasure_hunt.c
+6: argv = (char **) 0x7fffffffd928
++s
+check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:17
+17	in treasure_hunt.c
++break check_shipmate_list
+Breakpoint 6 at 0x55555555529e: file treasure_hunt.c, line 17.
++display name
+7: name = 0x7fffffffdcd9 "1"
++s
+18	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++s
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++s
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++s
+Download failed: Invalid argument.  Continuing without source file ./string/../sysdeps/x86_64/multiarch/strcmp-evex.S.
+__strcmp_evex () at ../sysdeps/x86_64/multiarch/strcmp-evex.S:229
+warning: 229	../sysdeps/x86_64/multiarch/strcmp-evex.S: No such file or directory
++n
+304	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+305	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+307	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+309	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+310	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1152	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1153	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1156	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1157	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1158	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1159	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1161	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1164	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1165	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1169	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1170	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+314	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+315	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+318	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+319	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+331	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+332	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+336	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+346	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+355	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+359	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+362	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+warning: 19	treasure_hunt.c: No such file or directory
+7: name = 0x7fffffffdcd9 "1"
++break
+Breakpoint 7 at 0x5555555552fa: file treasure_hunt.c, line 19.
++bt
+#0  check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+#1  0x0000555555555445 in decrypt_treasure_map (argv=0x7fffffffd928) at treasure_hunt.c:55
+#2  0x00005555555556ba in main (argc=6, argv=0x7fffffffd928) at treasure_hunt.c:112
++s
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++s
+Download failed: Invalid argument.  Continuing without source file ./string/../sysdeps/x86_64/multiarch/strcmp-evex.S.
+__strcmp_evex () at ../sysdeps/x86_64/multiarch/strcmp-evex.S:229
+warning: 229	../sysdeps/x86_64/multiarch/strcmp-evex.S: No such file or directory
++n
+304	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+305	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+307	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+309	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+310	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1152	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1153	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1156	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1157	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1158	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1159	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1161	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1164	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1165	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1169	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1170	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+314	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+315	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+318	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+319	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+331	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+332	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+336	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+346	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+355	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+359	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+362	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+warning: 19	treasure_hunt.c: No such file or directory
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++s
+Download failed: Invalid argument.  Continuing without source file ./string/../sysdeps/x86_64/multiarch/strcmp-evex.S.
+__strcmp_evex () at ../sysdeps/x86_64/multiarch/strcmp-evex.S:229
+warning: 229	../sysdeps/x86_64/multiarch/strcmp-evex.S: No such file or directory
++n
+304	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+305	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+307	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+309	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+310	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1152	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1153	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1156	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1157	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1158	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1159	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1161	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1164	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1165	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1169	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1170	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+314	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+315	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+318	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+319	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+331	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+332	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+336	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+346	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+355	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+359	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+362	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+warning: 19	treasure_hunt.c: No such file or directory
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+21	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+
+Breakpoint 7, check_shipmate_list (name=0x7fffffffdcd9 "1") at treasure_hunt.c:19
+19	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+26	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+27	in treasure_hunt.c
+7: name = 0x7fffffffdcd9 "1"
++n
+decrypt_treasure_map (argv=0x7fffffffd928) at treasure_hunt.c:57
+57	in treasure_hunt.c
+6: argv = (char **) 0x7fffffffd928
++break
+Breakpoint 8 at 0x555555555449: file treasure_hunt.c, line 57.
++display argv
+8: argv = (char **) 0x7fffffffd928
++bt
+#0  decrypt_treasure_map (argv=0x7fffffffd928) at treasure_hunt.c:57
+#1  0x00005555555556ba in main (argc=6, argv=0x7fffffffd928) at treasure_hunt.c:112
++s
+
+Breakpoint 4, walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:41
+41	in treasure_hunt.c
+4: key = 1
+5: message = 0x555555556018 "A pirate's name must be from our crew! Ye must find the right one."
++s
+47	in treasure_hunt.c
+4: key = 1
+5: message = 0x555555556018 "A pirate's name must be from our crew! Ye must find the right one."
++s
+Download failed: Invalid argument.  Continuing without source file ./stdio-common/./stdio-common/printf.c.
+__printf (format=0x555555556008 "Key %d: %s\n") at ./stdio-common/printf.c:32
+warning: 32	./stdio-common/printf.c: No such file or directory
++n
+33	in ./stdio-common/printf.c
++n
+36	in ./stdio-common/printf.c
++n
+Downloading source file /home/accts/adw58/26sp/223/labs/lab1-make-gdb/treasure_hunt_solution/treasure_hunt.c
+[###                                                                                                                                                          ]                                                                                                                                                                 walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:49
+warning: 49	treasure_hunt.c: No such file or directory
+4: key = 1
+5: message = 0x555555556018 "A pirate's name must be from our crew! Ye must find the right one."
++n
+[Inferior 1 (process 2668776) exited with code 01]
++n
+The program is not being run.
++show logging
+logging debugredirect:  off: Debug output will go to both the screen and the log file.
+logging enabled:  on: Logging is enabled.
+logging file:  The current logfile is "treasure_hunt.log".
+logging overwrite:  off: Logging appends to the log file.
+logging redirect:  off: Output will go to both the screen and the log file.
++break main
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Breakpoint 1 at 0x168c: file treasure_hunt.c, line 108.
++n
+The program is not being run.
++run
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:108
+warning: 108	treasure_hunt.c: No such file or directory
++n
+110	in treasure_hunt.c
++n
+[Inferior 1 (process 2252073) exited with code 01]
++n
+The program is not being run.
++run
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:108
+108	in treasure_hunt.c
++s
+count_cargo (count=1) at treasure_hunt.c:9
+9	in treasure_hunt.c
++s
+11	in treasure_hunt.c
++s
+14	in treasure_hunt.c
++s
+main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
+110	in treasure_hunt.c
++s
+walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+41	in treasure_hunt.c
++break walk_the_plank
+Breakpoint 2 at 0x5555555553b5: file treasure_hunt.c, line 41.
++bt
+#0  walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+#1  0x00005555555556ae in main (argc=1, argv=0x7fffffffd958) at treasure_hunt.c:110
++s
+43	in treasure_hunt.c
++s
+0x00007ffff7c87bf8 in __GI__IO_puts (str=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at ./libio/ioputs.c:35
+warning: 35	./libio/ioputs.c: No such file or directory
++n
+36	in ./libio/ioputs.c
++n
+39	in ./libio/ioputs.c
++n
+40	in ./libio/ioputs.c
++n
+warning: 1030	./libio/libioP.h: No such file or directory
++n
+warning: 42	./libio/ioputs.c: No such file or directory
++n
+36	in ./libio/ioputs.c
++n
+walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:49
+warning: 49	treasure_hunt.c: No such file or directory
++n
+[Inferior 1 (process 2252176) exited with code 01]
++n
+The program is not being run.
++run weide
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt weide
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=2, argv=0x7fffffffd948) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+110	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+43	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2252523) exited with code 01]
++n
+The program is not being run.
++run weide 2 3 4 5
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt weide 2 3 4 5
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2252710) exited with code 01]
++n
+The program is not being run.
++run ozan 1 2 3 4 
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt ozan 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2252906) exited with code 01]
++n
+The program is not being run.
++n
+The program is not being run.
++run alan 1 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt alan 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253044) exited with code 01]
++n
+The program is not being run.
++run mike
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt mike
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=2, argv=0x7fffffffd948) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+110	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+43	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253150) exited with code 01]
++run mike 1 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt mike 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253213) exited with code 01]
++run shah 1 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt shah 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253317) exited with code 01]
++n
+The program is not being run.
++run harry 1 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt harry 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253393) exited with code 01]
++n
+The program is not being run.
++run Mike
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Mike
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=2, argv=0x7fffffffd948) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+110	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=0, message=0x5555555562e8 "Yer `arrrrgc` is off! We're lookin' for five secrets!") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+43	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253546) exited with code 01]
++n
+The program is not being run.
++run mike 1 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt mike 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253604) exited with code 01]
++n
+The program is not being run.
++run Mike 1 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Mike 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253628) exited with code 01]
++run Shah 1 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Shah 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253684) exited with code 01]
++n
+The program is not being run.
++run Harry 1 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Harry 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=1, message=0x555555556018 "A pirate's name must be from our crew! Ye must find the right one.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253722) exited with code 01]
++n
+The program is not being run.
++run Ozan 1 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Ozan 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=1, message=0x555555556060 "Arrr! That pirate is a great leader, but not the one holding this particular key to the treasure!") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253787) exited with code 01]
++run Alan 1 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253849) exited with code 01]
++n
+The program is not being run.
++run Alan 5 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 5 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253913) exited with code 01]
++n
+The program is not being run.
++run Alan 14 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 14 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2253973) exited with code 01]
++run Alan 18 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 18 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2254034) exited with code 01]
++n
+The program is not being run.
++run Alan 2230 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 2230 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2254138) exited with code 01]
++n
+The program is not being run.
++run Alan 11 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 11 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2254238) exited with code 01]
++n
+The program is not being run.
++run Alan 2010 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 2010 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2254315) exited with code 01]
++n
+The program is not being run.
++n
+The program is not being run.
++run Alan 201 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 201 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2254359) exited with code 01]
++n
+The program is not being run.
++run Alan 7 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 7 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2254480) exited with code 01]
++n
+The program is not being run.
++run Alan 2 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 2 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2254579) exited with code 01]
++run Alan 9 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 9 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2254652) exited with code 01]
++n
+The program is not being run.
++run Alan 41 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 41 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2255366) exited with code 01]
++run Alan 5 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 5 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2258717) exited with code 01]
++n
+The program is not being run.
++run Alan 10 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 10 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2258793) exited with code 01]
++n
+The program is not being run.
++n
+The program is not being run.
++run Alan 17 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 17 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2258851) exited with code 01]
++n
+The program is not being run.
++run Alan 2026 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 2026 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2258951) exited with code 01]
++n
+The program is not being run.
++run Alan 2025 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 2025 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2258952) exited with code 01]
++n
+The program is not being run.
++run Alan 0 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 0 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2258994) exited with code 01]
++n
+The program is not being run.
++run Alan 1 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 1 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2259013) exited with code 01]
++n
+The program is not being run.
++n
+The program is not being run.
++run Alan 5 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 5 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2259209) exited with code 01]
++run Alan 5 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 5 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++s
+count_cargo (count=6) at treasure_hunt.c:9
+9	in treasure_hunt.c
++s
+13	in treasure_hunt.c
++s
+14	in treasure_hunt.c
++s
+main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:112
+112	in treasure_hunt.c
++s
+decrypt_treasure_map (argv=0x7fffffffd918) at treasure_hunt.c:53
+53	in treasure_hunt.c
++s
+54	in treasure_hunt.c
++s
+55	in treasure_hunt.c
++s
+check_shipmate_list (name=0x7fffffffdcd5 "Alan") at treasure_hunt.c:17
+17	in treasure_hunt.c
++s
+18	in treasure_hunt.c
++s
+19	in treasure_hunt.c
++s
+21	in treasure_hunt.c
++s
+__strcmp_evex () at ../sysdeps/x86_64/multiarch/strcmp-evex.S:229
+warning: 229	../sysdeps/x86_64/multiarch/strcmp-evex.S: No such file or directory
++s
+304	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+305	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+307	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+309	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+310	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1152	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1153	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1156	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1157	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1158	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1159	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1161	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1164	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1165	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1169	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1170	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+314	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+315	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+318	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+319	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+331	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+332	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+336	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+346	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+355	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+359	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+362	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+check_shipmate_list (name=0x7fffffffdcd5 "Alan") at treasure_hunt.c:19
+warning: 19	treasure_hunt.c: No such file or directory
++s
+21	in treasure_hunt.c
++s
+__strcmp_evex () at ../sysdeps/x86_64/multiarch/strcmp-evex.S:229
+warning: 229	../sysdeps/x86_64/multiarch/strcmp-evex.S: No such file or directory
++s
+304	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+305	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+307	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+309	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+310	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1152	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1153	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1156	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1157	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1158	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1159	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1161	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1164	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1165	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1169	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+1170	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+314	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+315	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+318	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+319	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+331	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+332	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+336	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+346	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+355	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+359	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+362	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++s
+check_shipmate_list (name=0x7fffffffdcd5 "Alan") at treasure_hunt.c:23
+warning: 23	treasure_hunt.c: No such file or directory
++s
+27	in treasure_hunt.c
++s
+decrypt_treasure_map (argv=0x7fffffffd918) at treasure_hunt.c:59
+59	in treasure_hunt.c
++s
+find_quartermaster (name=0x7fffffffdcd5 "Alan") at treasure_hunt.c:30
+30	in treasure_hunt.c
++s
+31	in treasure_hunt.c
++s
+32	in treasure_hunt.c
++s
+__strcmp_evex () at ../sysdeps/x86_64/multiarch/strcmp-evex.S:229
+warning: 229	../sysdeps/x86_64/multiarch/strcmp-evex.S: No such file or directory
++s
+304	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+305	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+307	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+309	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+310	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1152	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1153	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1156	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1157	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1158	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1159	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1161	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1164	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1165	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1169	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+1170	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+314	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+315	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+318	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+319	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+331	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+332	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+336	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+346	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+355	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+359	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+362	in ../sysdeps/x86_64/multiarch/strcmp-evex.S
++n
+find_quartermaster (name=0x7fffffffdcd5 "Alan") at treasure_hunt.c:34
+warning: 34	treasure_hunt.c: No such file or directory
++n
+37	in treasure_hunt.c
++n
+decrypt_treasure_map (argv=0x7fffffffd918) at treasure_hunt.c:64
+64	in treasure_hunt.c
++n
+65	in treasure_hunt.c
++n
+67	in treasure_hunt.c
++n
+69	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2259325) exited with code 01]
++run Alan 5 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 5 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++bt
+#0  main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++bt
+#0  walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+#1  0x00005555555554d2 in decrypt_treasure_map (argv=0x7fffffffd918) at treasure_hunt.c:69
+#2  0x00005555555556ba in main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:112
++f 1
+#1  0x00005555555554d2 in decrypt_treasure_map (argv=0x7fffffffd918) at treasure_hunt.c:69
+69	in treasure_hunt.c
++display passage
+No symbol "passage" in current context.
++s
+47	in treasure_hunt.c
++s
+__printf (format=0x555555556008 "Key %d: %s\n") at ./stdio-common/printf.c:32
+warning: 32	./stdio-common/printf.c: No such file or directory
++n
+33	in ./stdio-common/printf.c
++n
+36	in ./stdio-common/printf.c
++n
+walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:49
+warning: 49	treasure_hunt.c: No such file or directory
++n
+[Inferior 1 (process 2259655) exited with code 01]
++n
+The program is not being run.
++n
+The program is not being run.
++run Alan 5 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 5 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++s
+count_cargo (count=6) at treasure_hunt.c:9
+9	in treasure_hunt.c
++n
+13	in treasure_hunt.c
++n
+14	in treasure_hunt.c
++n
+main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:112
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++bt
+#0  walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+#1  0x00005555555554d2 in decrypt_treasure_map (argv=0x7fffffffd918) at treasure_hunt.c:69
+#2  0x00005555555556ba in main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:112
++f 2
+#2  0x00005555555556ba in main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:112
+112	in treasure_hunt.c
++info locals
+No locals.
++info scope
+requires an argument (function, line or *addr) to define a scope
++info variables
+All defined variables:
+
+File ../csu/abi-note.c:
+71:	static const struct {
+    Elf64_Nhdr nhdr;
+    char name[4];
+    int32_t desc[4];
+} __abi_tag;
+
+File ../login/utmp_file.c:
+37:	static int file_fd;
+39:	static off64_t file_offset;
+38:	static _Bool file_writable;
+42:	static struct utmp last_entry;
+
+File ../nptl_db/db_info.c:
+111:	const uint32_t _thread_db_const_thread_area;
+
+File ../nptl_db/structs.def:
+82:	const uint32_t _thread_db___nptl_initial_report_events[3];
+80:	const uint32_t _thread_db___nptl_nthreads[3];
+84:	const uint32_t _thread_db___pthread_keys[3];
+98:	const uint32_t _thread_db_dtv_dtv[3];
+116:	const uint32_t _thread_db_dtv_slotinfo_list_slotinfo[3];
+95:	const uint32_t _thread_db_link_map_l_tls_modid[3];
+96:	const uint32_t _thread_db_link_map_l_tls_offset[3];
+66:	const uint32_t _thread_db_list_t_next[3];
+67:	const uint32_t _thread_db_list_t_prev[3];
+56:	const uint32_t _thread_db_pthread_cancelhandling[3];
+60:	const uint32_t _thread_db_pthread_eventbuf[3];
+61:	const uint32_t _thread_db_pthread_eventbuf_eventmask[3];
+62:	const uint32_t _thread_db_pthread_eventbuf_eventmask_event_bits[3];
+93:	const uint32_t _thread_db_pthread_key_data_level2_data[3];
+52:	const uint32_t _thread_db_pthread_list[3];
+63:	const uint32_t _thread_db_pthread_nextevent[3];
+53:	const uint32_t _thread_db_pthread_report_events[3];
+58:	const uint32_t _thread_db_pthread_schedparam_sched_priority[3];
+57:	const uint32_t _thread_db_pthread_schedpolicy[3];
+59:	const uint32_t _thread_db_pthread_specific[3];
+55:	const uint32_t _thread_db_pthread_start_routine[3];
+54:	const uint32_t _thread_db_pthread_tid[3];
+111:	const uint32_t _thread_db_rtld_global__dl_stack_used[3];
+110:	const uint32_t _thread_db_rtld_global__dl_stack_user[3];
+109:	const uint32_t _thread_db_rtld_global__dl_tls_dtv_slotinfo_list[3];
+65:	const uint32_t _thread_db_sizeof_list_t;
+51:	const uint32_t _thread_db_sizeof_pthread;
+92:	const uint32_t _thread_db_sizeof_pthread_key_data_level2;
+72:	const uint32_t _thread_db_sizeof_td_eventbuf_t;
+69:	const uint32_t _thread_db_sizeof_td_thr_events_t;
+74:	const uint32_t _thread_db_td_eventbuf_t_eventdata[3];
+73:	const uint32_t _thread_db_td_eventbuf_t_eventnum[3];
+70:	const uint32_t _thread_db_td_thr_events_t_event_bits[3];
+
+File ../nss/getXXbyYY.c:
+93:	static char *buffer;
+90:	static __libc_lock_t lock;
+
+File ../nss/getXXent.c:
+69:	static char *buffer;
+66:	static __libc_lock_t lock;
+
+File ../nss/getXXent_r.c:
+99:	static nss_action_list last_nip;
+111:	static __libc_lock_t lock;
+97:	static nss_action_list nip;
+101:	static nss_action_list startp;
+107:	static int stayopen_tmp;
+
+File ../signal/sigreturn.c:
+27:	static const char __evoke_link_warning_sigreturn[50];
+
+File ../stdlib/strtol_l.c:
+197:	const unsigned long __strtol_ul_max_tab[35];
+200:	const unsigned char __strtol_ul_rem_tab[35];
+
+File ../sysdeps/ieee754/dbl-64/s_modf.c:
+27:	static const double one;
+
+File ../sysdeps/ieee754/dbl-64/s_scalbn.c:
+25:	static const double huge;
+26:	static const double tiny;
+23:	static const double two54;
+24:	static const double twom54;
+
+File ../sysdeps/ieee754/float128/../ldbl-128/s_frexpl.c:
+34:	static const _Float128 two114;
+
+File ../sysdeps/ieee754/float128/../ldbl-128/s_modfl.c:
+33:	static const _Float128 one;
+
+File ../sysdeps/ieee754/float128/../ldbl-128/s_scalbnl.c:
+33:	static const _Float128 huge;
+34:	static const _Float128 tiny;
+31:	static const _Float128 two114;
+32:	static const _Float128 twom114;
+
+File ../sysdeps/ieee754/flt-32/s_frexpf.c:
+24:	static const float two25;
+
+File ../sysdeps/ieee754/flt-32/s_modff.c:
+19:	static const float one;
+
+File ../sysdeps/ieee754/flt-32/s_scalbnf.c:
+21:	static const float huge;
+22:	static const float tiny;
+19:	static const float two25;
+20:	static const float twom25;
+
+File ../sysdeps/ieee754/ldbl-96/s_frexpl.c:
+36:	static const long double two65;
+
+File ../sysdeps/ieee754/ldbl-96/s_modfl.c:
+29:	static const long double one;
+
+File ../sysdeps/nptl/dl-mutex.c:
+25:	int (*___rtld_mutex_lock)(pthread_mutex_t *);
+26:	int (*___rtld_mutex_unlock)(pthread_mutex_t *);
+
+File ../sysdeps/nptl/dl-tls_init_tp.c:
+35:	_Bool __GI___nptl_initial_report_events;
+47:	const unsigned int __rseq_flags;
+49:	const ptrdiff_t __rseq_offset;
+48:	const unsigned int __rseq_size;
+
+File ../sysdeps/posix/gai_strerror.c:
+48:	static const struct {
+    int16_t code;
+    uint16_t idx;
+} msgidx[19];
+36:	static const union msgstr_t msgstr;
+
+File ../sysdeps/posix/profil.c:
+35:	static size_t nsamples;
+36:	static size_t pc_offset;
+37:	static u_int pc_scale;
+34:	static u_short *samples;
+
+File ../sysdeps/posix/signal.c:
+24:	sigset_t _sigintr;
+
+File ../sysdeps/posix/sprofil.c:
+61:	static struct region default_overflow_region;
+59:	static unsigned int overflow_counter;
+71:	static struct prof_info prof_info;
+
+File ../sysdeps/posix/system.c:
+51:	static struct sigaction intr;
+53:	static __libc_lock_t lock;
+51:	static struct sigaction quit;
+52:	static int sa_refcntr;
+
+File ../sysdeps/posix/tempname.c:
+200:	static const char letters[63];
+
+File ../sysdeps/pthread/sem_routines.c:
+62:	static void *sem_mappings;
+65:	static int sem_mappings_lock;
+
+File ../sysdeps/unix/getlogin.c:
+27:	static char name[33];
+
+File ../sysdeps/unix/sysv/linux/brk.c:
+25:	void *__curbrk;
+
+File ../sysdeps/unix/sysv/linux/check_pf.c:
+65:	static struct cached_data *cache;
+66:	static __libc_lock_t lock;
+59:	static struct cached_data noai6ai_cached;
+
+File ../sysdeps/unix/sysv/linux/clone-pidfd-support.c:
+32:	static int __waitid_pidfd_supported;
+
+File ../sysdeps/unix/sysv/linux/dl-sysdep.c:
+54:	int __GI___libc_enable_secure;
+Quit
++info locals
+No locals.
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2259980) exited with code 01]
++n
+The program is not being run.
++n
+The program is not being run.
++run Alan 5 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 5 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+108	in treasure_hunt.c
++n
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++s
+47	in treasure_hunt.c
++s
+__printf (format=0x555555556008 "Key %d: %s\n") at ./stdio-common/printf.c:32
+warning: 32	./stdio-common/printf.c: No such file or directory
++n
+33	in ./stdio-common/printf.c
++n
+36	in ./stdio-common/printf.c
++n
+walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:49
+warning: 49	treasure_hunt.c: No such file or directory
++bt
+#0  walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:49
+#1  0x00005555555554d2 in decrypt_treasure_map (argv=0x7fffffffd918) at treasure_hunt.c:69
+#2  0x00005555555556ba in main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:112
++f 1
+#1  0x00005555555554d2 in decrypt_treasure_map (argv=0x7fffffffd918) at treasure_hunt.c:69
+69	in treasure_hunt.c
++s
+__GI_exit (status=1) at ./stdlib/exit.c:137
+warning: 137	./stdlib/exit.c: No such file or directory
++n
+138	in ./stdlib/exit.c
++n
+[Inferior 1 (process 2260643) exited with code 01]
++n
+The program is not being run.
++n
+The program is not being run.
++run Alan 5 2 3 4
+Starting program: /home/classes/cpsc2230/class/lee.jaden.jml362/lab1b/treasure_hunt_starter/treasure_hunt Alan 5 2 3 4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:108
+warning: 108	treasure_hunt.c: No such file or directory
++s
+count_cargo (count=6) at treasure_hunt.c:9
+9	in treasure_hunt.c
++s
+13	in treasure_hunt.c
++n
+14	in treasure_hunt.c
++n
+main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:112
+112	in treasure_hunt.c
++n
+
+Breakpoint 2, walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+41	in treasure_hunt.c
++bt
+#0  walk_the_plank (key=2, message=0x5555555560c8 "Ye seem to have entered the wrong passage...The map shows a different value.") at treasure_hunt.c:41
+#1  0x00005555555554d2 in decrypt_treasure_map (argv=0x7fffffffd918) at treasure_hunt.c:69
+#2  0x00005555555556ba in main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:112
++f2
+Undefined command: "f2".  Try "help".
++f 2
+#2  0x00005555555556ba in main (argc=6, argv=0x7fffffffd918) at treasure_hunt.c:112
+112	in treasure_hunt.c
++info locals
+No locals.
++n
+47	in treasure_hunt.c
++n
+49	in treasure_hunt.c
++n
+[Inferior 1 (process 2260958) exited with code 01]
++n
+The program is not being run.
++n
+The program is not being run.
++n
+The program is not being run.
++n
+The program is not being run.
