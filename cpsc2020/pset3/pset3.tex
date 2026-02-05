@@ -1,0 +1,168 @@
+\documentclass[12pt, letterpaper]{article}
+\title{pset 3}
+\author{Jaden Lee\thanks{made in Overleaf}}
+\date{2/5/26}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{tabularx}
+
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\arraystretch}{1.25}
+
+\begin{document}
+\maketitle
+\hyperlink{https://yale.instructure.com/courses/113840/assignments/558951}{https://yale.instructure.com/courses/113840/assignments/558951}
+% \neg for neg
+% \wedge for and 
+% \vee for or
+% \rightarrow
+% \equiv
+
+% https://www.tablesgenerator.com/# <-- latex table generator
+
+\section{Problem 1}
+
+(25 points): Write each of the following in predicate logic, using only quantifiers (over the set of integers $\Z$, logical operators, arithmetic operators ( $+, -, \cdot$), and relational operators ($<, >, =$, or combinations thereof). Write the negation using the same restrictions, and the additional restriction that there are no negations in front of the quantifiers. Determine which of the negation and the original statement is true (you need not give a proof).
+
+\begin{itemize}
+    \item If two integers sum to something greater than 30, then at least one of them is greater than 15.
+    \item Any integer that is a multiple of both 4 and 6 is also a multiple of 24.
+    \item Between any two odd integers there is some even integer.
+    \item Between any two distinct odd integers there is some even integer.
+    \item There is a largest even integer.
+\end{itemize}
+
+\subsection{solution} 
+
+\begin{itemize}
+    \item the original is true
+        $$\forall i, k \in \Z [i + k > 30 \rightarrow k > 15 \vee i > 15]$$
+        $$\exists i, k \in \Z [i + k > 30 \wedge (k \leq 15 \wedge i \leq 15)]$$
+    \item the negation is true
+        $$\forall i \in \Z [(i \mid 4 \wedge i \mid 6 )\rightarrow i \mid 24]$$
+        $$\exists i \in \Z [(i \mid 4 \wedge i \mid 6 )\wedge i \nmid 24]$$
+    \item the negation is true
+        $$\forall x, y, k, l \in \Z [[x=2k+1 \wedge y=2l+1]\rightarrow \exists m ((x < m < y \vee x > m > y) \wedge 2 \mid m)]$$
+        $$\exists x, y, k, l \forall m \in \Z [[x=2k+1 \wedge y=2l+1]\wedge (x < m < y \wedge 2 \nmid m)]$$
+    \item the original is true
+        $$\forall x, y, k, l \exists m  \in \Z [[x=2k+1 \wedge y=2l+1 \wedge x \neq y]\rightarrow \exists m ((x < m < y \vee x > m > y) \wedge 2 \mid m)]$$
+        $$\exists x, y, k, l \forall m  \in \Z [[x=2k+1 \wedge y=2l+1 \wedge x \neq y]\wedge (x < m < y \wedge 2 \nmid m)]$$
+    \item the negation is true
+        $$\exists x \in \Z[2 \mid x \rightarrow \forall y (2 \mid y \wedge y \geq x)]$$
+        $$\forall x \exists y \in \Z[2 \mid x \wedge 2 \nmid y \vee y < x]$$
+\end{itemize}
+
+
+
+% \cdot for multiply
+% \mid for divisible by
+
+
+\section {problem 2}
+(25 points): Write proofs of each of the following, giving a justification of each step that includes the rule of inference, logical equivalence, axiom, or theorem used (permitted theorems include rules of arithmetic or algebra, previous results, and the following: every integer is either even or odd but not both).  (Hint: for some of these, it may be easier to prove the contrapositive.)
+\begin{itemize}
+    \item For every odd integer, the next integer is even.
+    \item If three positive integers sum to 100, then at least one of them is greater than 33.
+    \item If the product of two integers is odd, then both integers are odd.
+    \item The product of two consecutive integers is even.
+    \item For any integer $x$, if $6 \mid x^2$, then $4 \mid x^3-x^2$
+\end{itemize}
+
+\subsection{solution}
+
+
+\subsubsection{For every odd integer, the next integer is even.}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{3cm}}
+1 &suppose integer j such that $\exists j,x,y \in \Z [j = 2(x \cdot y) + 1]$ &supposition \\
+2 &$j = 2(x \cdot y) + 1$ &restating 1 in formula format \\
+3 &suppose j + 1 is also odd &supposition \\
+4 &$2 \neg \mid j+1$ &restating 3 in formula format \\
+5 &$2 \neg \mid 2(x \cdot y) + 2$ &algebra \\
+6 &$2 \neg \mid 2((x \cdot y) +1)$ &algebra \\
+7 &$2((x \cdot y) +1) \in \Z$ &closure \\
+8 &j+1 is not odd &definition of even \\
+9 &j+1 is even &definition of even x2 \\
+10 &suppose j + 2 is also odd &supposition \\
+11 &$2 \neg \mid j+2$ &restating 10 formula format \\
+12 &$2 \neg \mid 2(x \cdot y) + 3$ &algebra \\
+13 &$2 \neg \mid 2((x \cdot y) +1) + 1$ &algebra \\
+14 &$2((x \cdot y) +1) + 1 \in \Z$ &closure \\
+15 &$2 \mid 2((x \cdot y) +1)$ &algebra \\
+16 &$2 \neg \mid 2((x \cdot y) +1) + 1$ means j + 2 is odd &conclusions \\
+17 &$\therefore$ between 2 odd numbers (shown above as j and j+2) is an even number (j+1) &conclusions 2 \\
+\end{tabularx}
+\end{table}
+
+\subsubsection{If three positive integers sum to 100, then at least one of them is greater than 33.}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{3cm}}
+1 &suppose $\exists x, y, z \in \Z [x + y + z =100]$ &supposition \\
+2 &suppose x < 33 &supposition \\
+3 &then $y + z > 67$ &algebra (based on 100-x is between 67 and 100) \\
+4 &suppose y < 33 &supposition \\
+5 &$z < 33 \rightarrow y + z \leq 67$; &algebra (based on 67-y is between 34 and 67) \\
+6 &then $z > 33$; in other words, z must be $>33$ otherwise $z + y < 67$ &conclusions (for supposition in 4) \\
+7 &then $z > 33$; in other words, z must be $>33$ otherwise $x + y + z < 100$ &conclusions (for supposition in 2) \\
+\end{tabularx}
+\end{table}
+
+\subsubsection{If the product of two integers is odd, then both integers are odd.}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{3cm}}
+1 &suppose $\exists x, y, z \in \Z [x \cdot y = z] $&supposition \\
+2 &(suppose x and y are even): $\exists k l \in \Z [2(k) = x \wedge 2(l) = y]$ &supposition + def of even \\
+3 &$x \cdot y = z$ &restating 1 \\
+4 &$2k \cdot 2l = z$ &algebra \\
+5 &$2(k \cdot l) = z$ &algebra \\
+6 &$2(k \cdot l)$ is an integer &closure \\
+7 &$2(k \cdot l)$ is even &def of even \\
+8 &z is even &def of even \\
+9 &if two integers are even, then their product is even &conclusions \\
+10 &If the product of two integers is odd, then both integers are odd. &contrapositive \\
+\end{tabularx}
+\end{table}
+
+\subsubsection{The product of two consecutive integers is even.}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{3cm}}
+1 &suppose $\exists x, y, z \in \Z [x \cdot y = z \wedge y - x = 1]$ &supposition \\
+2 &$2 \mid x \rightarrow 2 \mid y + 1 \vee 2 \mid y \rightarrow 2 \mid x + 1$ &def of evens and odds (even + 1 is odd and vice versa) \\
+3 &suppose x is even, making y odd &supposition \\
+4 &$\exists k \in \Z [2k = x]$ &def even \\
+5 &$\exists l \in \Z [2l +1= y]$ &def odd \\
+6 &$x \cdot y = z$ &restating 1 \\
+7 &$2k \cdot (2l + 1) = z$ &algebra \\
+8 &$4kl + 2k = z$ &algebra \\
+9 &$(2 (2kl + k)) = z$ &algebra \\
+10 &$2kl + k$ is an integer &closure \\
+11 &$(2 (2kl + k)) $ is even &def even \\
+12 &z is even &def even \\
+13 &The product of two consecutive integers is even. &conclusion \\
+\end{tabularx}
+\end{table}
+
+\subsubsection{For any integer $x$, if $6 \mid x^2$, then $4 \mid x^3-x^2$}
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{3cm}}
+1 &suppose $\exists x \in \Z$ &existential instantiation \\
+2 &suppose $4 \nmid (x^3-x^2) $ eg $x = 3; 4 \nmid 21$ &existential instantiation \\
+3 &if$ x = 3$, then $x ^ 2= 9$ &algebra \\
+4 &$ 6 \nmid 9$ &algebra \\
+5 &thus, since 4 does not divide $(x^3-x^2)$ nor 6 does not divide $x ^2$ when $x =3$ &conclusions \\
+6 &x cannot work for \emph{EVERY} integer, clearly, so this cannot be true &conclusions 2 \\
+7 &for any integer x if 6 divides $x^2$ then 4 divides $(x^3-x^2)$ &contrapositive, modus ponens \\
+\end{tabularx}
+\end{table}
+\end{document}

@@ -119,7 +119,7 @@ For every college team, there is a player who played for them and plays for a pr
 
 Every player played for a unique college team. 
 {\small [note: use logical connectives, the predicates defined above, and the two standard quantifiers $\forall$ and $\exists$; you may also use $=$ (which is really a two-place predicate written using infix notation rather than function notation, so $x=y$ can be thought of as the predicate $=(x, y)$ meaning ``$x$ and $y$ are the same element'')]}
-& $\forall x \exists y[(N(x, y) \wedge \neg N(z, y)) \vee \neg (x = z)]$
+& $\forall x \exists y \exists z[(N(x, y) \wedge \neg N(z, y)) \wedge \neg (x = z)]$
 & $x \in P, z \in P, y \in C$
 \\ \hline
 \end{tabularx}
