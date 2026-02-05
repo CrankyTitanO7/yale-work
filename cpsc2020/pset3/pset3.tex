@@ -33,24 +33,28 @@
     \item There is a largest even integer.
 \end{itemize}
 
-\subsection{solution} 
+\subsection{solution} \footnote{note that solutions use odd() and even(). the exact proof predicate definitions are listed at the end, and are only omitted here to manage clutter}
 
-\begin{itemize}
-    \item the original is true
-        $$\forall i, k \in \Z [i + k > 30 \rightarrow k > 15 \vee i > 15]$$
-        $$\exists i, k \in \Z [i + k > 30 \wedge (k \leq 15 \wedge i \leq 15)]$$
-    \item the negation is true
-        $$\forall i \in \Z [(i \mid 4 \wedge i \mid 6 )\rightarrow i \mid 24]$$
-        $$\exists i \in \Z [(i \mid 4 \wedge i \mid 6 )\wedge i \nmid 24]$$
-    \item the negation is true
-        $$\forall x, y, k, l \in \Z [[x=2k+1 \wedge y=2l+1]\rightarrow \exists m ((x < m < y \vee x > m > y) \wedge 2 \mid m)]$$
-        $$\exists x, y, k, l \forall m \in \Z [[x=2k+1 \wedge y=2l+1]\wedge (x < m < y \wedge 2 \nmid m)]$$
-    \item the original is true
-        $$\forall x, y, k, l \exists m  \in \Z [[x=2k+1 \wedge y=2l+1 \wedge x \neq y]\rightarrow \exists m ((x < m < y \vee x > m > y) \wedge 2 \mid m)]$$
-        $$\exists x, y, k, l \forall m  \in \Z [[x=2k+1 \wedge y=2l+1 \wedge x \neq y]\wedge (x < m < y \wedge 2 \nmid m)]$$
-    \item the negation is true
-        $$\exists x \in \Z[2 \mid x \rightarrow \forall y (2 \mid y \wedge y \geq x)]$$
-        $$\forall x \exists y \in \Z[2 \mid x \wedge 2 \nmid y \vee y < x]$$
+\begin{itemize} 
+    \item \textbf{Original is True}
+        $$\forall i, k \in \Z [(i + k > 30) \rightarrow (i > 15 \vee k > 15)]$$
+        $$\exists i, k \in \Z [(i + k > 30) \wedge (i \leq 15 \wedge k \leq 15)]$$
+
+    \item \textbf{Negation is True}
+        $$\forall i \exists k, l,m\in \Z [(4k=i \wedge 6l=i) \rightarrow 24m= i]$$
+        $$\exists i, k, l\in \Z [4l=i \wedge 6l= i \wedge 24m \neq i]$$
+
+    \item \textbf{Negation is True} (False if $x=y$)
+        $$\forall x, y \in \Z [(Odd(x) \wedge Odd(y)) \rightarrow \exists m \in \Z (Even(m) \wedge (x < m < y \vee y < m < x))]$$
+        $$\exists x, y \in \Z [Odd(x) \wedge Odd(y) \wedge \forall m \in \Z (Even(m) \rightarrow (m \leq x \vee m \geq y) \wedge (m \leq y \vee m \geq x))]$$
+
+    \item \textbf{Original is True}
+        $$\forall x, y \in \Z [(Odd(x) \wedge Odd(y) \wedge x \neq y) \rightarrow \exists m \in \Z (Even(m) \wedge (x < m < y \vee y < m < x))]$$
+        $$\exists x, y \in \Z [Odd(x) \wedge Odd(y) \wedge x \neq y \wedge \forall m \in \Z (Even(m) \rightarrow (m \leq x \vee m \geq y) \wedge (m \leq y \vee m \geq x))]$$
+
+    \item \textbf{Negation is True}
+        $$\exists x \in \Z [Even(x) \wedge \forall y \in \Z (Even(y) \rightarrow x \geq y)]$$
+        $$\forall x \in \Z [Even(x) \rightarrow \exists y \in \Z (Even(y) \wedge y > x)]$$.
 \end{itemize}
 
 
@@ -76,24 +80,17 @@
 
 \begin{table}[H]
 \centering
-\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{3cm}}
-1 &suppose integer j such that $\exists j,x,y \in \Z [j = 2(x \cdot y) + 1]$ &supposition \\
-2 &$j = 2(x \cdot y) + 1$ &restating 1 in formula format \\
+\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{4cm}}
+1 &suppose integer j such that $\exists j,x \in \Z [j = 2x + 1]$ &supposition \\
+2 &$j = 2x + 1$ &restating 1 in formula format \\
 3 &suppose j + 1 is also odd &supposition \\
-4 &$2 \neg \mid j+1$ &restating 3 in formula format \\
-5 &$2 \neg \mid 2(x \cdot y) + 2$ &algebra \\
-6 &$2 \neg \mid 2((x \cdot y) +1)$ &algebra \\
-7 &$2((x \cdot y) +1) \in \Z$ &closure \\
+4 &$2\nmid j+1$ &restating 3 in formula format \\
+5 &$2 \nmid 2x + 2$ &algebra \\
+6 &$2 \nmid 2(x +1)$ is a false statement&algebra \\
+7 &$(x +1) \in \Z$ &closure \\
 8 &j+1 is not odd &definition of even \\
 9 &j+1 is even &definition of even x2 \\
-10 &suppose j + 2 is also odd &supposition \\
-11 &$2 \neg \mid j+2$ &restating 10 formula format \\
-12 &$2 \neg \mid 2(x \cdot y) + 3$ &algebra \\
-13 &$2 \neg \mid 2((x \cdot y) +1) + 1$ &algebra \\
-14 &$2((x \cdot y) +1) + 1 \in \Z$ &closure \\
-15 &$2 \mid 2((x \cdot y) +1)$ &algebra \\
-16 &$2 \neg \mid 2((x \cdot y) +1) + 1$ means j + 2 is odd &conclusions \\
-17 &$\therefore$ between 2 odd numbers (shown above as j and j+2) is an even number (j+1) &conclusions 2 \\
+17 &$\therefore$ For every odd integer (j), the next integer is even (j + 2). &conclusions 2 \\
 \end{tabularx}
 \end{table}
 
@@ -101,11 +98,11 @@
 
 \begin{table}[H]
 \centering
-\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{3cm}}
+\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{4cm}}
 1 &suppose $\exists x, y, z \in \Z [x + y + z =100]$ &supposition \\
-2 &suppose x < 33 &supposition \\
+2 &suppose $x < 33$ &supposition \\
 3 &then $y + z > 67$ &algebra (based on 100-x is between 67 and 100) \\
-4 &suppose y < 33 &supposition \\
+4 &suppose $y < 33$ &supposition \\
 5 &$z < 33 \rightarrow y + z \leq 67$; &algebra (based on 67-y is between 34 and 67) \\
 6 &then $z > 33$; in other words, z must be $>33$ otherwise $z + y < 67$ &conclusions (for supposition in 4) \\
 7 &then $z > 33$; in other words, z must be $>33$ otherwise $x + y + z < 100$ &conclusions (for supposition in 2) \\
@@ -116,8 +113,8 @@
 
 \begin{table}[H]
 \centering
-\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{3cm}}
-1 &suppose $\exists x, y, z \in \Z [x \cdot y = z] $&supposition \\
+\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{4cm}}
+1 &suppose $\exists x, y, z \in \Z [x \cdot y = z]$ &supposition \\
 2 &(suppose x and y are even): $\exists k l \in \Z [2(k) = x \wedge 2(l) = y]$ &supposition + def of even \\
 3 &$x \cdot y = z$ &restating 1 \\
 4 &$2k \cdot 2l = z$ &algebra \\
@@ -126,7 +123,16 @@
 7 &$2(k \cdot l)$ is even &def of even \\
 8 &z is even &def of even \\
 9 &if two integers are even, then their product is even &conclusions \\
-10 &If the product of two integers is odd, then both integers are odd. &contrapositive \\
+10 &If the product of two integers is odd, then both integers are odd. &contrapositive \\ \hline
+11 &(suppose x is even and y is odd): $\exists k l \in \Z [2(k) = x \wedge 2(l) + 1 = y]$ &supposition + def of even + def of odd \\
+12 &$x \cdot y = z$ &restating 1 \\
+13 &$2k \cdot (2l + 1) = z$ &algebra \\
+14 &$ = 4kl + 2k$ &algebra \\
+15 &$2kl + k $is an integer &closure \\
+16 &$4kl + 2k$ is even &def of even (note this is also expressed as$ 2(2kl + k)$ \\
+17 &z is even &def of even \\
+18 &if one integer is even and the other is odd, then their product is even &conclusions \\
+19 &If the product of two integers is odd, then both integers are odd. &contrapositive \\
 \end{tabularx}
 \end{table}
 
@@ -134,7 +140,7 @@
 
 \begin{table}[H]
 \centering
-\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{3cm}}
+\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{4cm}}
 1 &suppose $\exists x, y, z \in \Z [x \cdot y = z \wedge y - x = 1]$ &supposition \\
 2 &$2 \mid x \rightarrow 2 \mid y + 1 \vee 2 \mid y \rightarrow 2 \mid x + 1$ &def of evens and odds (even + 1 is odd and vice versa) \\
 3 &suppose x is even, making y odd &supposition \\
@@ -148,6 +154,12 @@
 11 &$(2 (2kl + k)) $ is even &def even \\
 12 &z is even &def even \\
 13 &The product of two consecutive integers is even. &conclusion \\
+14 &suppose y is even, making x odd & \\
+15 &$\exists k \in \Z [2k = y]$ &def even \\
+16 &$\exists l \in \Z [2l +1= x]$ &def odd \\
+17 &$x \cdot y = z$ &restating 1 \\
+18 &$2k \cdot (2l + 1) = z$ &algebra \\
+19 &The product of two consecutive integers is even. &conclusion (note that the math is exactly as 8 onward, so it is pointless to re-prove) \\
 \end{tabularx}
 \end{table}
 
@@ -155,14 +167,28 @@
 
 \begin{table}[H]
 \centering
-\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{3cm}}
-1 &suppose $\exists x \in \Z$ &existential instantiation \\
-2 &suppose $4 \nmid (x^3-x^2) $ eg $x = 3; 4 \nmid 21$ &existential instantiation \\
-3 &if$ x = 3$, then $x ^ 2= 9$ &algebra \\
-4 &$ 6 \nmid 9$ &algebra \\
-5 &thus, since 4 does not divide $(x^3-x^2)$ nor 6 does not divide $x ^2$ when $x =3$ &conclusions \\
-6 &x cannot work for \emph{EVERY} integer, clearly, so this cannot be true &conclusions 2 \\
-7 &for any integer x if 6 divides $x^2$ then 4 divides $(x^3-x^2)$ &contrapositive, modus ponens \\
+\begin{tabularx}{\textwidth}{p{0.8cm} >{\raggedright\arraybackslash}X p{4cm}}
+1 &suppose $\exists x \in \Z [6 \mid x^2]$ &supposition \\
+2 &lemma: $6 \mid x^2 \rightarrow 2 \mid x^2$ &fundamental theorem of arithmetic \\
+3 &lemma (cont'd): $2 \mid x^2 \rightarrow 2 \mid x$ &def even + even squares have even square roots \\
+4 &lemma: $6 \mid x^2 \rightarrow 3 \mid x^2$ &fundamental theorem of arithmetic \\
+5 &lemma (cont'd): $3 \mid x^2 \rightarrow 3 \mid x$ &if a prime divides a square, it divides the root (based on fundamental theorem of arithmetic) \\
+6 &$\therefore 6 |x $ &since conclusions drawn in 3 and 5 \\ \hline
+7 &let $\exists k \in \Z [6k = x]$ &supposition (existential instantiation) \\
+8 &$x^3-x^2 = ((6k)^3 - (6k)^2$ &algebra \\
+9 &$= (6^2) (6k^3 - k^2)$ &algebra \\
+10 &$= 36 (6k^3 - k^2) = 4 \cdot (9)(6k^3 - k^2) $ &algebra \\
+11 &$\therefore 4 | (x^3-x^2) $ &4 is a factor of the latter, proven in 10 \\
+12 &For any integer $x$, if $6 \mid x^2$, then $4 \mid x^3-x^2$ &conclusions \\
 \end{tabularx}
 \end{table}
+
+\subsection{shorthand expansions}
+parts of the solutions of this problem set use odd() and even() instead of properly using their definitions. here, I will demonstrate my proficiency in using these despite omitting them from the solution:
+\subsubsection{odd()}
+given an odd(x) where $x \in \Z$:
+$\exists x, k \in \Z [x = 2k +1]$
+\subsubsection{even()}
+given an even(x) where $x \in \Z$:
+$\exists x, k \in \Z [x = 2k]$
 \end{document}
