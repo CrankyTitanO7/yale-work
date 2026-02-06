@@ -56,7 +56,7 @@ void piratelist_print(const List *list) {
 
         printf("%i", list->pirates[i].pirate_id);
         printf(" ; ");
-        printf(list->pirates[i].name);
+        printf("%s", list->pirates[i].name);
     }
     printf("\n");
 }
