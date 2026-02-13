@@ -6,7 +6,9 @@
  * locations (latitude, longitude) of the cities.  For example,
  *
  * ./TSP ne_6.dat -given -nearest -insert HVN ALB MHT BDL ORH PVD
- *
+ * -given    :       805.78 HVN ALB MHT BDL ORH PVD HVN
+ * -nearest  :       734.16 HVN ALB MHT PVD ORH BDL HVN
+ * -insert   :       721.47 HVN BDL ALB ORH MHT PVD HVN
  * where ne_6.dat could contain
  *
  * HVN,41.26388889,-72.88694444
@@ -88,9 +90,6 @@ int main(int argc, char **argv)
 
   read_file(in, num_cities, cities);
 
-  normalize_start(num_cities, cities);
-  normalize_direction(num_cities, cities);
-
   // iterate over methods requested on command line
   for (size_t a = 2; a < origin; a++)
     {
@@ -107,6 +106,8 @@ int main(int argc, char **argv)
           // cities[];
         }
       
+      normalize_start(num_cities, cities);
+      normalize_direction(num_cities, cities);
 
       double total = calculate_total(num_cities, cities);
       printf("%-10s: %12.2f ", argv[a], total);
@@ -298,8 +299,15 @@ void normalize_start(size_t n, city tour[])
 
 void normalize_direction(size_t n, city tour[])
 {
-  if (tour[1].index >= tour[n-1].index) {
-    swap(tour, 1, n-1);
+  if (tour[1].index > tour[n-1].index) {  // Changed >= to >
+    // Reverse positions 1 through n-1
+    size_t left = 1;
+    size_t right = n - 1;
+    while (left < right) {
+      swap(tour, left, right);
+      left++;
+      right--;
+    }
   }
 }
 
