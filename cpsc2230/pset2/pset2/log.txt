@@ -1,0 +1,27 @@
+ESTIMATE of time to complete assignment: 67 hours
+
++------+----------+--------+-----------------------------------------------------------------------+
+| Date | Time     | Time   | Work completed                                                        |
+|      | Started  | Spent  |                                                                       |
++======+==========+========+=======================================================================+
+| 2/8  | 11 pm    | 1.5 hr | assignment reading (instructions), total distance function            |
++------+----------+--------+-----------------------------------------------------------------------+
+| 2/11 | 11 pm    | 1 hr   | given and nearest function implementation                             |
++------+----------+--------+-----------------------------------------------------------------------+
+| 2/12 | 11:01 pm | 2 hr   | file reading, insert function, adding other features (ie error check) |
++------+----------+--------+-----------------------------------------------------------------------+
+
+https://www.tablesgenerator.com/text_tables#
+
+4:30  TOTAL time spent
+
+I discussed my solution with: n/a;
+
+DISCUSSION
+my code had many errors at first, especially with file parsing. What was helpful was making the test.c file, 
+and testing each function/journey build method (ie -given flag), separately. It is also included in the makefile 
+(if submitted). Perhaps what was most oppressive was debugging before this method: it was impossible to test 
+without a workbench provided as such. In the future I must remedy this by beginning with such a file. Perhaps 
+the best way to test is this workbench format, and testing the code modularly. I did not discuss the code with 
+anyone (including TAs) for more than 10 minutes; in my experience, I work best alone... but I am open to seeing 
+that change...
