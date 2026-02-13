@@ -42,13 +42,18 @@ size_t length = 6;
 
 int main(int argc, char **argv)
 {
-  city *cities = malloc(length * sizeof(city));
+  
 
 
   // the index on the command line of the origin city
   // TODO: this is hard-coded as if there is always one method
   // after the filename; fix that to account for more than one
   size_t origin = 3;
+
+  if (argc < 2) {
+    fprintf(stderr, "Usage: %s <datafile> <flags> <cities>\n", argv[0]);
+    return 1;
+  }
 
   while (argv[origin][0] == '-') {
     origin ++;
@@ -62,12 +67,19 @@ int main(int argc, char **argv)
     fprintf(stderr, "must be more than 2 cities\n");
     return(1);
   }
+  
+
+    FILE *in = fopen(argv[1], "r");
+    if (in == NULL) {
+        fprintf(stderr, "Error: cannot open file %s\n", argv[1]);
+        return 1;
+    }
+
+    
   // printf("%d\n", origin);
 
   // the number of cities on the command line
   size_t num_cities = argc - origin;
-
-  FILE *in = fopen(argv[1], "r");
 
   // TODO: maybe add some more error checking here
   
@@ -87,12 +99,28 @@ int main(int argc, char **argv)
   // };
 
   
+  city *cities = malloc(num_cities * sizeof(city));
+  
 
-  read_file(in, num_cities, cities);
+  if (read_file(in, num_cities, cities) != 0) {
+      fclose(in);
+      free(cities);
+      fprintf(stderr, "Error: issue opening file %s\n", argv[1]);
+      return 1;
+    }
+
+  city *original = malloc(num_cities * sizeof(city));
+  for (int i = 0; i < num_cities; i++) {
+      original[i] = cities[i];
+  }
 
   // iterate over methods requested on command line
   for (size_t a = 2; a < origin; a++)
     {
+      for (int i = 0; i < num_cities; i++) {
+        cities[i] = original[i];
+      }
+
       if (strcmp(argv[a], "-insert") == 0)
         {
           route_insert(num_cities, cities);
@@ -118,9 +146,10 @@ int main(int argc, char **argv)
 
   fclose(in);
   for (int i = 0; i < num_cities; i++) {
-    free(cities[i].name);
-  }
+    free((char *)cities[i].name);  // Cast to remove const
+}
   free(cities);
+  free(original);
   
   return 0;
 }
@@ -131,6 +160,7 @@ void route_insert(size_t n, city tour[])
   size_t dest;
   find_closest_pair(n, tour, &orig, &dest);
   swap(tour, 0, orig);
+  if (dest == 0) dest = orig;
   swap(tour, 1, dest);
 
   // print_tour(n, tour);
@@ -219,10 +249,12 @@ size_t find_insertion_point(size_t n, city tour[], size_t subtour_len, size_t ne
   }
 
   // step 2.5: return to ans position
-  while (i < next) {
+  while (i < subtour_len) {
     swap(tour, i, i+1);
     i++;
   }
+  // Swap from subtour_len back to original position next
+  swap(tour, subtour_len, next);
   // step 3: return the value
   // printf("inserting at position %ld\n", ans);
   return ans;
@@ -338,10 +370,10 @@ int read_file(FILE *in, size_t n, city cities[])
             return 1;
         }
 
-        if (i >= length) {
-          length *= 2;
-          cities = realloc(cities, length * sizeof(cities));
-        }
+        // if (i >= length) {
+        //   length *= 2;
+        //   cities = realloc(cities, length * sizeof(cities));
+        // }
         
         cities[i].index = i;
     }
