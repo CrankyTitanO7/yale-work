@@ -1,0 +1,105 @@
+Spaghetti Carbonara
+Chicken Parmesan
+Beef Stroganoff
+Vegetable Stir Fry
+Mushroom Risotto
+Grilled Cheese Sandwich
+Eggplant Parmesan
+Shrimp Scampi
+Chicken Alfredo
+Lasagna
+Vegetarian Chili
+Beef Tacos
+Chicken Caesar Salad
+Pulled Pork Sandwich
+Pad Thai
+Penne alla Vodka
+Lentil Soup
+Fettuccine Alfredo
+Fish and Chips
+Chicken Biryani
+Egg Fried Rice
+Butter Chicken
+Sushi Platter
+Shakshuka
+Falafel Wrap
+Beef Wellington
+Ratatouille
+Lamb Curry
+Moussaka
+Vegetable Korma
+Pho
+Kimchi Stew
+Tandoori Chicken
+Bulgogi
+Shawarma
+Ceviche
+Bibimbap
+Green Curry
+Ramen
+Tacos al Pastor
+Paella
+Baklava
+Gumbo
+Empanadas
+Pierogi
+Jollof Rice
+Tom Yum Soup
+Poutine
+Tamales
+Okonomiyaki
+Hummus with Pita
+Borscht
+Dim Sum
+Chimichurri Steak
+Peking Duck
+Chana Masala
+Malai Kofta
+Gyoza
+Miso Soup
+Chimichangas
+Kebab
+Laksa
+Shepherd’s Pie
+Arepas
+Yakitori
+Goulash
+Dolma
+Vindaloo
+Massaman Curry
+Rogan Josh
+Chicken Adobo
+Bratwurst
+Khachapuri
+Tteokbokki
+Beef Pho
+Katsu Curry
+Shish Tawook
+Nasi Goreng
+Aloo Gobi
+Sauerbraten
+Cassoulet
+Pavlova
+Fried Plantains
+Spanakopita
+Pozole
+Caesar Salad
+Calamari
+Escargot
+Fondue
+Saganaki
+Menemen
+Stuffed Peppers
+Arancini
+Onigiri
+Kibbeh
+Clam Chowder
+Quesadillas
+Mapo Tofu
+Lomo Saltado
+Polenta
+Fajitas
+Croque Monsieur
+Plantain Chips
+Feijoada
+Sopa de Lima
