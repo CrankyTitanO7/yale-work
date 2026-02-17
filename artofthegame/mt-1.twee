@@ -1,0 +1,235 @@
+:: StoryTitle
+mt-1
+
+
+:: StoryData
+{
+  "ifid": "A1DBD69A-DE98-415D-87E1-4E78E403D5DA",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "main menu",
+  "tag-colors": {
+    "turing-test-instructions": "red",
+    "meta-info": "yellow"
+  },
+  "zoom": 1
+}
+
+
+:: \ confirm proctor {"position":"275,1025","size":"100,100"}
+
+
+
+:: \ day-1-greet {"position":"775,750","size":"100,100"}
+## the state greeter awakens you
+
+(text-colour:green)[Hail Mary. The morning has come, and you must arise. Fulfil your sacred duty by vowing to kill every last automaton, android, and robot that threatens our great human race, and emerge, the last True Guardian of this city.]
+
+[[kill (vow to kill all androids) -> workday 1.1]]
+[[spare -> killed by state]]
+[[do nothing -> killed by state]]
+
+
+:: \ decide judge eve {"position":"712.5,1125","size":"100,100"}
+## you are judging Eve
+
+[[kill. -> kill Eve]]
+[[spare. -> spare Eve]]
+[[do nothing. -> do nothing Eve]]
+
+
+:: \ decide judge robbie {"position":"700,1500","size":"100,100"}
+## you are judging robbie
+
+[[kill. -> kill robbie]]
+[[spare. -> spare robbie]]
+[[do nothing. -> do nothing robbie]]
+
+
+:: \ decide q eve {"position":"837.5,1125","size":"100,100"}
+
+
+
+:: \ decide q robbie {"position":"825,1500","size":"100,100"}
+
+
+
+:: \ do nothing Eve {"position":"575,1250","size":"100,100"}
+## you do nothing
+
+Eve is dragged away to the next room. She screams something. It is cut short by the slamming door.
+
+(set: $eveState to "incarcerated")
+
+[[continue to next subject -> judge robbie]]
+
+
+:: \ do nothing robbie {"position":"575,1625","size":"100,100"}
+## you do nothing
+
+The justice officer enters the room. Robbie stands without complaint, and salutes you. "Hail Mary!" he shouts. Duty weighs upon his shoulders. Mechanically, he gathers his things, and follows the officer into the other room.
+
+(set: $robbieState to "incarcerated")
+
+[[ head home]]
+
+
+:: \ head home {"position":"700,1750","size":"100,100"}
+<!--some day-based logic-->
+
+
+[[day 1 end]]
+
+
+:: \ instructions {"position":"775,625","size":"100,100"}
+Automaton look-alikes are among the last of the True Human population. To protect the humans from these machine invaders, we must purge them from our population. You are the Hail Mary: the guardian of this city: the last city of humans. the state has charged you with weeding out these filthy androids from our population. You must decide if each citizen entering the city is an automaton or a human. If the androids make it inside, they will kill everyone.
+
+Remember: it only takes one.
+
+Stay vigilant, and ''Hail Mary''
+
+[[proceed to day 1 -> day-1-greet]]
+
+
+:: \ introduction {"position":"775,500","size":"100,100"}
+(text-colour:magenta)[welcome to the (advanced) turing test! you have 2^31 − 1 seconds to complete this test. Instructions are included inside. You may only bring a pencil and paper. Calculators are not allowed on this test. 
+You may begin when you are ready.]
+
+[[begin test -> instructions]]
+
+
+:: \ judge eve 1 {"position":"775,1000","size":"100,100"}
+(set: $eveEncounters to $eveEncounters + 1)
+
+(text-colour:green)[your first subject is Eve --redacted--, a 29 year old woman.]
+
+[[judge -> decide judge eve]]
+[[question -> decide q eve]]
+
+
+:: \ judge robbie {"position":"700,1375","size":"100,100"}
+(text-colour:green)[your next subject is Robbie, the state mailman]
+
+[[judge -> decide judge robbie]]
+[[question -> decide q robbie]]
+
+
+:: \ kill Eve {"position":"700,1250","size":"100,100"}
+## Eve has been killed by the state
+
+(set: $eveState to "killed")
+
+<!--execution video plays-->
+<video> 
+	<source src="movie.mp4" type="video/mp4">
+</video>
+
+(set: $killstreak to $killstreak + 1)
+
+[[continue to next subject -> judge robbie]]
+
+
+:: \ kill robbie {"position":"700,1625","size":"100,100"}
+## Robbie has been killed by the state
+
+The execution officer enters the room. Robbie stands without complaint, and salutes you. "Hail Mary!" he shouts. Does he sound tired? Duty weighs upon his shoulders. Mechanically, he gathers his things, and follows the officer into the death room.
+
+(set: $robbieState to "killed")
+
+<!--execution video plays-->
+<video> 
+	<source src="movie.mp4" type="video/mp4">
+</video>
+
+(set: $killstreak to $killstreak + 1)
+
+[[ head home]]
+
+
+:: \ kill self {"position":"150,900","size":"100,100"}
+## (text-colour:red)[You have been killed by self ]
+
+(text-colour:magenta)[you may choose to hand in your test early, or go back and revise your answers before turning them in
+(set: $death to "self")
+
+[[hand in test early -> confirm proctor]]
+
+
+:: \ killed by state {"position":"275,900","size":"100,100"}
+## (text-colour:red)[You have been killed by the state ]
+(set: $means to (random: 1, 11))
+
+### (if: $means is 1)[(executed via firing squad)]
+### (elseif: $means is 2)[ (executed via incineration)]
+### (elseif: $means is 3)[ (executed via electric chair)]
+### (elseif: $means is 4)[ (executed via guillotine)]
+### (elseif: $means is 5)[ (executed via Organ Donorship Human Recycling Program)]
+### (elseif: $means is 6)[ (executed by High Ranking Intelligence Officer)]
+### (elseif: $means is 7)[ (executed by --redacted--)]
+### (elseif: $means is 8)[ (executed via --redacted--)]
+### (elseif: $means is 9)[ (executed via human experimentation)]
+### (elseif: $means is 10)[ (executed via mandatory military service)]
+### (elseif: $means is 11)[ (executed for the Betterment of Humanity)]
+
+(text-colour:magenta)[you may choose to hand in your test early, or go back and revise your answers before turning them in]
+
+(set: $death to "state")
+
+[[hand in test early -> confirm proctor]]
+
+
+
+
+:: \ spare Eve {"position":"825,1250","size":"100,100"}
+## you have spared Eve
+
+she proceeds into the next room, and will enter the city.
+
+[[continue to next subject -> judge robbie]]
+
+
+:: \ spare robbie {"position":"825,1625","size":"100,100"}
+## you have spared Robbie
+
+he will bring the mail into the city, and return the next day.
+
+[[ head home]]
+
+
+:: \ workday 1.1 {"position":"775,875","size":"100,100"}
+you walk to work
+[[judge subject 1-> judge eve 1]]
+
+
+:: \ workday 2.1 {"position":"825,2000","size":"100,100"}
+
+
+
+:: day 1 end {"position":"700,1875","size":"100,100"}
+## you arrive home. 
+
+The state greeter asks you:
+
+(text-colour:green)[Hail Mary. You are about to retire and rest. 
+are you happy with the merciful judgements you made today?]
+
+[[kill. -> kill self]]
+[[spare -> workday 2.1]]
+[[do nothing -> killed by state]]
+
+
+
+:: main menu {"position":"775,375","size":"100,100"}
+# main menu
+
+## the (advanced) turing test
+
+[[begin test -> introduction]] 
+
+<!--self vars->
+(set: $death to "alive")
+(set: $killstreak to 0)
+
+<!--eve vars->
+(set: $eveState to "alive")
+(set: $eveEncounters to 0)

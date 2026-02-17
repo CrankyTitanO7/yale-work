@@ -48,7 +48,7 @@ int main(int argc, char **argv)
   // the index on the command line of the origin city
   // TODO: this is hard-coded as if there is always one method
   // after the filename; fix that to account for more than one
-  size_t origin = 3;
+  size_t origin = 2;
 
   if (argc < 2) {
     fprintf(stderr, "Usage: %s <datafile> <flags> <cities>\n", argv[0]);
