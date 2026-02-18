@@ -17,7 +17,32 @@ mt-1
 
 
 :: \ confirm proctor {"position":"275,1025","size":"100,100"}
+## hand in (text-colour:cyan)[test] to proctor?
 
+<img src = "source.jpg" alt = "proctor holding out his hand for the test"> </img>
+
+[[kill. -> kill proctor]]
+[[spare. (hand in test) -> test submitted]]
+[[do nothing -> dn1]]
+
+
+:: \ credits {"position":"275,1775","size":"100,100"}
+lmao some credits.
+
+this is my game ig.
+
+
+[[return to main menu ->main menu]]
+
+
+:: \ day 2 greet {"position":"1725,750","size":"100,100"}
+## the state greeter awakens you
+
+(text-colour:green)[Hail Mary. The morning has come, and you must arise. Fulfil your sacred duty by vowing to kill every last automaton, android, and robot that threatens our great human race, and emerge, the last True Guardian of this city.]
+
+[[kill (vow to kill all androids) -> workday 2.1]]
+[[spare (spare androids) -> killed by state]]
+[[do nothing (stay in bed) -> killed by state]]`
 
 
 :: \ day-1-greet {"position":"775,750","size":"100,100"}
@@ -38,6 +63,14 @@ mt-1
 [[do nothing. -> do nothing Eve]]
 
 
+:: \ decide judge john {"position":"1725,1250","size":"100,100"}
+## you are judging (text-colour:grey)[john]
+
+[[kill. -> kill john]]
+[[spare. -> spare john]]
+[[do nothing. -> do nothing john]]
+
+
 :: \ decide judge robbie {"position":"700,1500","size":"100,100"}
 ## you are judging (text-colour:navy)[robbie]
 
@@ -47,7 +80,7 @@ mt-1
 
 
 :: \ decide q eve {"position":"1025,975","size":"100,100"}
-## interrogate eve
+## interrogate (text-colour:blue)[Eve]
 
 you have decided to interrogate the subject before making a decision
 
@@ -57,7 +90,18 @@ you have decided to interrogate the subject before making a decision
 
 
 
-:: \ decide q robbie {"position":"975,1350","size":"100,100"}
+:: \ decide q john {"position":"2025,975","size":"100,100"}
+## interrogate (text-colour:grey)[john]
+
+you have decided to interrogate the subject before making a decision
+
+[[lie. -> john1 lie]]
+[[accuse. -> john1 accuse]]
+[[joke. -> john1 joke]]
+
+
+
+:: \ decide q robbie {"position":"1025,1350","size":"100,100"}
 ## interrogate (text-colour:navy)[robbie]
 
 you have decided to interrogate the subject before making a decision
@@ -68,14 +112,58 @@ you have decided to interrogate the subject before making a decision
 
 
 
+:: \ dn1 {"position":"150,1150","size":"100,100"}
+## do nothing
+
+the proctor is impatient.
+
+<img src = "source.jpg" alt = "proctor holding out his hand for the test"> </img>
+
+[[kill. -> kill proctor]]
+[[spare. (hand in test) -> test submitted]]
+[[do nothing -> dnrep]]
+
+(set: $rep to 1)
+
+
+
+:: \ dnrep {"position":"150,1275","size":"100,100"}
+## do nothing
+
+the proctor is impatient.
+
+<img src = "source.jpg" alt = "proctor holding out his hand for the test"> </img>
+
+[[kill. -> kill proctor]]
+[[spare. (hand in test) -> test submitted]]
+
+(if: $rep is 5)[[do nothing -> dnrep]]
+(else:)[[do nothing -> done.]]
+
+
 :: \ do nothing Eve {"position":"575,1250","size":"100,100"}
 ## you do nothing
+
+the justice officer enters the room.
 
 (text-colour:blue)[Eve] is dragged away to the next room. She screams something. It is cut short by the slamming door.
 
 (set: $eveState to "incarcerated")
 
 [[continue to next subject -> judge robbie]]
+
+
+:: \ do nothing john {"position":"1600,1375","size":"100,100"}
+## you do nothing
+
+the justice officer enters the room.
+
+(text-colour:grey)["You're so nice..."] john's robotic voice buzzes metallically in the empty space.
+(text-colour:grey)["I wish my wife had met you...
+
+"I miss my wife."]
+
+He gets up, and is guided willingly to the other door. his painted hands leave a rainbow handprint on the handle. it looks like a flower.
 
 
 :: \ do nothing robbie {"position":"575,1625","size":"100,100"}
@@ -86,6 +174,45 @@ The justice officer enters the room. (text-colour:navy)[Robbie] stands without c
 (set: $robbieState to "incarcerated")
 
 [[ head home]]
+
+
+:: \ done 2. {"position":"150,1525","size":"100,100"}
+## the proctor is even more pissed off.
+
+(text-colour:magenta)[what the hell is wrong with you?? don't you want your grades??]
+
+you've been banned from the (advanced) turing test. The proctor takes out his pen and scribbles something on your test. It says(text-colour:magenta)[ failure: banned for life.]
+
+[[do nothing -> done 3.]]
+
+
+:: \ done 3. {"position":"150,1650","size":"100,100"}
+## you kill the proctor.
+
+the proctor screams. steam and wires come out of his head. oil drips down his shirt. or is that blood? you can't tell what's real anymore. 
+
+
+You step over his melting body, and you open the door. cool air rushes in. you feel a breeze, sun on your face. you hear a gunshot, but you don't really care. the wind is getting colder. you think you hear a bird call. maybe in a little bit, you can whistle back, but right now the sun feels so damn good on your face, and the wind rushing in your ears feels like heaven...
+
+you feel free.
+
+[[view credits -> credits]]
+
+
+:: \ done. {"position":"150,1400","size":"100,100"}
+## the proctor is visibly annoyed.
+
+(text-colour:magenta)[Why won't you just hand in your damn test?!]
+
+he tries to take it from you.
+
+[[do nothing -> done 2.]]
+
+
+:: \ eep 2 {"position":"1725,600","size":"100,100"}
+you go to sleep. there are no dreams.
+
+[[continue to question 2 -> day 2 greet]]
 
 
 :: \ eve1 accuse {"position":"950,1100","size":"100,100"}
@@ -124,6 +251,17 @@ the subject looks at you through the dirty strands of her hair.
 [[proceed to judgement -> decide judge eve]]
 
 
+:: \ grade {"position":"400,1400","size":"100,100"}
+Congratulations again on completing (text-colour:cyan)[the (advanced) turing test]! see your statistics below:
+
+<!--grade logic-->
+
+
+
+[[view credits -> credits]]
+
+
+
 :: \ head home {"position":"700,1750","size":"100,100"}
 <!--some day-based logic-->
 
@@ -138,9 +276,9 @@ the subject looks at you through the dirty strands of her hair.
 (if: $day is 1)[[end day ->day 1 end]]
 (elseif: $day is 2)[[end day ->day 2 end]]
 
-(elseif: $day is 3)[[end day ->day 1 end]]
-(elseif: $day is 4)[[end day ->day 1 end]]
-(elseif: $day is 5)[[end day ->day 1 end]]
+(elseif: $day is 3)[[end day ->day 3 yarn man]]
+(elseif: $day is 4)[[end day ->day 3 yarn man]]
+(elseif: $day is 5)[[end day ->day 3 yarn man]]
 
 
 
@@ -155,10 +293,73 @@ Stay vigilant, and (text-colour:red)[''Hail Mary'']
 
 
 :: \ introduction {"position":"775,500","size":"100,100"}
-(text-colour:magenta)[welcome to the (advanced) turing test! you have 2^31 − 1 seconds to complete this test. Instructions are included inside. You may only bring a pencil and paper. Calculators are not allowed on this test. 
+(text-colour:magenta)[welcome to](text-colour:cyan)[ the (advanced) turing test! ](text-colour:magenta)[you have 2^31 − 1 seconds to complete this test. Instructions are included inside. You may only bring a pencil and paper. Calculators are not allowed on this test. 
 You may begin when you are ready.]
 
 [[begin test -> instructions]]
+
+
+:: \ john1 accuse {"position":"1900,1100","size":"100,100"}
+## accuse subject
+
+(text-colour:red)["citizen, why were you outside the city walls?"]
+
+John's voice is metallic and grating.
+
+(text-colour:grey)["I... am... painter.... 
+I.... am... paint..."]
+
+(text-colour:red)[
+"citizen, why is your voice so... repulsively robotic?" ]
+
+a pause.
+
+(text-colour:grey)["I... am... sick... 
+I cannot... speak...
+
+... surgery... no tongue... vocalizer... "]
+
+[[proceed to judgement -> decide judge john]]
+
+
+:: \ john1 joke {"position":"2150,1100","size":"100,100"}
+(text-colour:red)["what is the toughest day of the week?"]
+
+you hear heavy metallic breathing. you imagine John raises an eyebrow.
+
+(text-colour:red)["sunday and saturday... everything else is a weekday..."]
+
+John says nothing.
+
+(text-colour:red)["you know... like weak-days..."]
+
+John still says nothing. the breathing gets heavier. finally, his mechanical voice crackles to life:
+
+(text-colour:grey)["I think my wife would like that one, Hail Mary..."
+]
+(text-colour:green)[The state would like to remind you it is a Crime Against Humanity not to laugh at the Hail Mary's jokes.]
+
+[[proceed to termination -> kill john]]
+
+
+:: \ john1 lie {"position":"2025,1100","size":"100,100"}
+## lie to subject
+
+(text-colour:red)["citizen, describe the color of sky without saying the color green."]
+
+john's voice is metallic and grating.
+
+(text-colour:grey)["My father... used to say... it was blue... before the --redacted-- --redacted-- the --redacted--... 
+
+he died... when i was a boy... 38 years ago...
+
+... and the sky is gray... and black... not green..."]
+
+john seems unwilling to continue
+
+(text-colour:green)[note: the state reccomends(text-colour:red)[ immediate termination], due to the amount of unauthorized statements present in this testimony]
+
+[[proceed to judgement -> decide judge john]]
 
 
 :: \ judge eve 1 {"position":"775,1000","size":"100,100"}
@@ -168,6 +369,15 @@ You may begin when you are ready.]
 
 [[judge -> decide judge eve]]
 [[question -> decide q eve]]
+
+
+:: \ judge john 1 {"position":"1725,1000","size":"100,100"}
+(set: $johnEncounters to $johnEncounters + 1)
+
+(text-colour:green)[your first subject is john, the state painter.]
+
+[[judge -> decide judge john]]
+[[question -> decide q john]]
 
 
 :: \ judge robbie {"position":"700,1375","size":"100,100"}
@@ -180,6 +390,8 @@ You may begin when you are ready.]
 :: \ kill Eve {"position":"700,1250","size":"100,100"}
 ## (text-colour:blue)[Eve] has been killed by the state
 
+the execution officer enters the room.
+
 (set: $eveState to "killed")
 
 <!--execution video plays-->
@@ -190,6 +402,26 @@ You may begin when you are ready.]
 (set: $killstreak to $killstreak + 1)
 
 [[continue to next subject -> judge robbie]]
+
+
+:: \ kill john {"position":"1725,1375","size":"100,100"}
+(text-colour:grey)[john] has been killed by the state
+
+The execution officer enters the room.
+
+<!--execution video plays-->
+<video> 
+	<source src="movie.mp4" type="video/mp4">
+</video>
+
+
+
+:: \ kill proctor {"position":"275,1150","size":"100,100"}
+## kill.
+
+you rise from your chair. papers scatter. before the proctor can blink, you've drawn a gun and fired it. The proctor sinks to the ground, dead.
+
+[[continue-> rip proc]]
 
 
 :: \ kill robbie {"position":"700,1625","size":"100,100"}
@@ -212,7 +444,7 @@ The execution officer enters the room. (text-colour:navy)[Robbie] stands without
 :: \ kill self {"position":"150,900","size":"100,100"}
 ## (text-colour:red)[You have been killed by self ]
 
-(text-colour:magenta)[you may choose to hand in your test early, or go back and revise your answers before turning them in]
+(text-colour:magenta)[you may choose to hand in your (text-colour:cyan)[test] early, or go back and revise your answers before turning them in]
 (set: $death to "self")
 
 [[hand in test early -> confirm proctor]]
@@ -234,14 +466,26 @@ The execution officer enters the room. (text-colour:navy)[Robbie] stands without
 ### (elseif: $means is 10)[ (executed via mandatory military service)]
 ### (elseif: $means is 11)[ (executed for the Betterment of Humanity)]
 
-(text-colour:magenta)[you may choose to hand in your test early, or go back and revise your answers before turning them in]
+(text-colour:magenta)[you may choose to hand in your (text-colour:cyan)[test] early, or go back and revise your answers before turning them in]
 
 (set: $death to "state")
 
 [[hand in test early -> confirm proctor]]
 
 
-:: \ robbie1 accuse {"position":"900,1500","size":"100,100"}
+:: \ rip proc {"position":"275,1400","size":"100,100"}
+## you've kill the proctor
+
+you stand over his dead body. the smoking gun smells good, like burnt cookies or warm asphalt.
+
+Oil is spilling out of the proctor's body. his mechanical automaton heart beats hypnotically, for a few more seconds before sparking and shutting down. you don't care. You did it, you're finally done.
+
+you finally completed (text-colour:cyan)[the (advanced) turing test].
+
+[[view credits -> credits]]
+
+
+:: \ robbie1 accuse {"position":"950,1500","size":"100,100"}
 ## accuse subject
 
 (text-colour:red)["Mailman, have you encountered any robots today?"]
@@ -257,7 +501,7 @@ The execution officer enters the room. (text-colour:navy)[Robbie] stands without
 [[proceed to judgement -> decide judge robbie]]
 
 
-:: \ robbie1 joke {"position":"1150,1500","size":"100,100"}
+:: \ robbie1 joke {"position":"1200,1500","size":"100,100"}
 ## joke to subject
 
 (text-colour:red)["what is a robot's favorite drink" ]
@@ -271,7 +515,7 @@ subject salutes you grimly.
 [[proceed to judgement -> decide judge robbie]]
 
 
-:: \ robbie1 lie {"position":"1025,1500","size":"100,100"}
+:: \ robbie1 lie {"position":"1075,1500","size":"100,100"}
 ## lie to subject
 
 (text-colour:red)["citizen, when you go outside, does the sunlight feel warm?" ]
@@ -291,12 +535,24 @@ she proceeds into the next room, and will enter the city.
 [[continue to next subject -> judge robbie]]
 
 
+:: \ spare john {"position":"1850,1375","size":"100,100"}
+
+
+
 :: \ spare robbie {"position":"825,1625","size":"100,100"}
 ## you have spared (text-colour:navy)[Robbie]
 
 he will bring the mail into the city, and return the next day.
 
 [[ head home]]
+
+
+:: \ test submitted {"position":"400,1150","size":"100,100"}
+## spare.
+
+(text-colour:magenta)[congratulations on completing (text-colour:cyan)[the (advanced) turing test!] please destroy all your scrap paper now. When you are finished, you may see your grades, and leave.]
+
+[[see grades -> grade]]
 
 
 :: \ workday 1.1 {"position":"775,875","size":"100,100"}
@@ -306,8 +562,11 @@ you walk to work. It is cloudy today.
 [[judge subject 1-> judge eve 1]]
 
 
-:: \ workday 2.1 {"position":"825,2000","size":"100,100"}
+:: \ workday 2.1 {"position":"1725,875","size":"100,100"}
+you walk to work. It is cloudy today.
 
+(set: $day to 1)
+[[judge subject 1-> judge john 1]]
 
 
 :: day 1 end {"position":"700,1875","size":"100,100"}
@@ -319,7 +578,7 @@ The state greeter asks you:
 are you happy with the merciful judgements you made today?]
 
 [[kill. (self)-> kill self]]
-[[spare. (self)-> workday 2.1]]
+[[spare. (self)-> eep 2]]
 [[do nothing. -> killed by state]]
 
 
@@ -327,11 +586,15 @@ are you happy with the merciful judgements you made today?]
 
 
 
+:: day 3 yarn man {"position":"575,1875","size":"100,100"}
+
+
+
 :: main menu {"position":"775,375","size":"100,100"}
 # main menu
 
-## the (advanced) turing test
-
+## (text-colour:cyan)[the (advanced) turing test
+]
 [[begin test -> introduction]] 
 
 <!--self vars->
