@@ -26,12 +26,12 @@ mt-1
 (text-colour:green)[Hail Mary. The morning has come, and you must arise. Fulfil your sacred duty by vowing to kill every last automaton, android, and robot that threatens our great human race, and emerge, the last True Guardian of this city.]
 
 [[kill (vow to kill all androids) -> workday 1.1]]
-[[spare -> killed by state]]
-[[do nothing -> killed by state]]
+[[spare (spare androids) -> killed by state]]
+[[do nothing (stay in bed) -> killed by state]]`
 
 
 :: \ decide judge eve {"position":"712.5,1125","size":"100,100"}
-## you are judging Eve
+## you are judging(text-colour:blue)[ Eve]
 
 [[kill. -> kill Eve]]
 [[spare. -> spare Eve]]
@@ -39,25 +39,39 @@ mt-1
 
 
 :: \ decide judge robbie {"position":"700,1500","size":"100,100"}
-## you are judging robbie
+## you are judging (text-colour:navy)[robbie]
 
 [[kill. -> kill robbie]]
 [[spare. -> spare robbie]]
 [[do nothing. -> do nothing robbie]]
 
 
-:: \ decide q eve {"position":"837.5,1125","size":"100,100"}
+:: \ decide q eve {"position":"1025,975","size":"100,100"}
+## interrogate eve
+
+you have decided to interrogate the subject before making a decision
+
+[[lie. -> eve1 lie]]
+[[accuse. -> eve1 accuse]]
+[[joke. -> eve1 joke]]
 
 
 
-:: \ decide q robbie {"position":"825,1500","size":"100,100"}
+:: \ decide q robbie {"position":"975,1350","size":"100,100"}
+## interrogate (text-colour:navy)[robbie]
+
+you have decided to interrogate the subject before making a decision
+
+[[lie. -> robbie1 lie]]
+[[accuse. -> robbie1 accuse]]
+[[joke. -> robbie1 joke]]
 
 
 
 :: \ do nothing Eve {"position":"575,1250","size":"100,100"}
 ## you do nothing
 
-Eve is dragged away to the next room. She screams something. It is cut short by the slamming door.
+(text-colour:blue)[Eve] is dragged away to the next room. She screams something. It is cut short by the slamming door.
 
 (set: $eveState to "incarcerated")
 
@@ -67,18 +81,67 @@ Eve is dragged away to the next room. She screams something. It is cut short by 
 :: \ do nothing robbie {"position":"575,1625","size":"100,100"}
 ## you do nothing
 
-The justice officer enters the room. Robbie stands without complaint, and salutes you. "Hail Mary!" he shouts. Duty weighs upon his shoulders. Mechanically, he gathers his things, and follows the officer into the other room.
+The justice officer enters the room. (text-colour:navy)[Robbie] stands without complaint, and salutes you. "Hail Mary!" he shouts. Duty weighs upon his shoulders. Mechanically, he gathers his things, and follows the officer into the other room.
 
 (set: $robbieState to "incarcerated")
 
 [[ head home]]
 
 
+:: \ eve1 accuse {"position":"950,1100","size":"100,100"}
+## accuse subject
+
+(text-colour:red)["Citizen, why did you exit the city today?"]
+(text-colour:blue)["I scavenge the outskirts of the city, to scrap automatons and earn a living"]
+(text-colour:red)["why did you return?"]
+(text-colour:blue)["because every child deserves a mother."]
+
+[[proceed to judgement -> decide judge eve]]
+
+
+:: \ eve1 joke {"position":"1200,1100","size":"100,100"}
+## joke to subject
+
+(text-colour:red)["how do you make a tissue dance?"]
+
+the subject stares at you.
+
+(text-colour:red)["you put a little boogie in it"]
+
+(text-colour:blue)[Eve] blinks.
+
+[[proceed to judgement -> decide judge eve]]
+
+
+:: \ eve1 lie {"position":"1075,1100","size":"100,100"}
+## lie to subject
+
+(text-colour:red)["citizen, do you miss the taste of snow?"]
+
+the subject looks at you through the dirty strands of her hair.
+(text-colour:blue)["Ma'am, I don't think snow has a taste."]
+
+[[proceed to judgement -> decide judge eve]]
+
+
 :: \ head home {"position":"700,1750","size":"100,100"}
 <!--some day-based logic-->
 
+(if: $day is 1)[you walk home. It's cloudy.]
+(elseif: $day is 2)[you walk home. It's cloudy.]
 
-[[day 1 end]]
+(elseif: $day is 3)[you walk home. It's cloudy.]
+(elseif: $day is 4)[you walk home. It's cloudy.]
+(elseif: $day is 5)[you walk home. It's cloudy.]
+
+
+(if: $day is 1)[[end day ->day 1 end]]
+(elseif: $day is 2)[[end day ->day 2 end]]
+
+(elseif: $day is 3)[[end day ->day 1 end]]
+(elseif: $day is 4)[[end day ->day 1 end]]
+(elseif: $day is 5)[[end day ->day 1 end]]
+
 
 
 :: \ instructions {"position":"775,625","size":"100,100"}
@@ -86,8 +149,8 @@ Automaton look-alikes are among the last of the True Human population. To protec
 
 Remember: it only takes one.
 
-Stay vigilant, and ''Hail Mary''
-
+Stay vigilant, and (text-colour:red)[''Hail Mary'']
+`
 [[proceed to day 1 -> day-1-greet]]
 
 
@@ -115,7 +178,7 @@ You may begin when you are ready.]
 
 
 :: \ kill Eve {"position":"700,1250","size":"100,100"}
-## Eve has been killed by the state
+## (text-colour:blue)[Eve] has been killed by the state
 
 (set: $eveState to "killed")
 
@@ -130,9 +193,9 @@ You may begin when you are ready.]
 
 
 :: \ kill robbie {"position":"700,1625","size":"100,100"}
-## Robbie has been killed by the state
+## (text-colour:navy)[Robbie] has been killed by the state
 
-The execution officer enters the room. Robbie stands without complaint, and salutes you. "Hail Mary!" he shouts. Does he sound tired? Duty weighs upon his shoulders. Mechanically, he gathers his things, and follows the officer into the death room.
+The execution officer enters the room. (text-colour:navy)[Robbie] stands without complaint, and salutes you. "Hail Mary!" he shouts. Does he sound tired? Duty weighs upon his shoulders. Mechanically, he gathers his things, and follows the officer into the death room.
 
 (set: $robbieState to "killed")
 
@@ -149,7 +212,7 @@ The execution officer enters the room. Robbie stands without complaint, and salu
 :: \ kill self {"position":"150,900","size":"100,100"}
 ## (text-colour:red)[You have been killed by self ]
 
-(text-colour:magenta)[you may choose to hand in your test early, or go back and revise your answers before turning them in
+(text-colour:magenta)[you may choose to hand in your test early, or go back and revise your answers before turning them in]
 (set: $death to "self")
 
 [[hand in test early -> confirm proctor]]
@@ -178,10 +241,50 @@ The execution officer enters the room. Robbie stands without complaint, and salu
 [[hand in test early -> confirm proctor]]
 
 
+:: \ robbie1 accuse {"position":"900,1500","size":"100,100"}
+## accuse subject
+
+(text-colour:red)["Mailman, have you encountered any robots today?"]
+
+(text-colour:navy)[robbie] looks at you in the eyes.
+
+(text-colour:navy)["Not a single godforsaken android robot or automaton, ma'am. All is quiet outside the wall."]
+
+(text-colour:red)["then why are you dressed in your combat gear, Mailman?"]
+
+(text-colour:navy)["if the enemy does not rest, why should I?"]
+
+[[proceed to judgement -> decide judge robbie]]
+
+
+:: \ robbie1 joke {"position":"1150,1500","size":"100,100"}
+## joke to subject
+
+(text-colour:red)["what is a robot's favorite drink" ]
+
+subject's mouth tightens.
+
+(text-colour:navy)["electric screwdriver"]
+
+subject salutes you grimly.
+
+[[proceed to judgement -> decide judge robbie]]
+
+
+:: \ robbie1 lie {"position":"1025,1500","size":"100,100"}
+## lie to subject
+
+(text-colour:red)["citizen, when you go outside, does the sunlight feel warm?" ]
+
+(text-colour:navy)[the mailman] answers
+
+(text-colour:navy)["I haven't felt sunlight in years."]
+
+[[proceed to judgement -> decide judge robbie]]
 
 
 :: \ spare Eve {"position":"825,1250","size":"100,100"}
-## you have spared Eve
+## you have spared (text-colour:blue)[Eve]
 
 she proceeds into the next room, and will enter the city.
 
@@ -189,7 +292,7 @@ she proceeds into the next room, and will enter the city.
 
 
 :: \ spare robbie {"position":"825,1625","size":"100,100"}
-## you have spared Robbie
+## you have spared (text-colour:navy)[Robbie]
 
 he will bring the mail into the city, and return the next day.
 
@@ -197,7 +300,9 @@ he will bring the mail into the city, and return the next day.
 
 
 :: \ workday 1.1 {"position":"775,875","size":"100,100"}
-you walk to work
+you walk to work. It is cloudy today.
+
+(set: $day to 1)
 [[judge subject 1-> judge eve 1]]
 
 
@@ -213,9 +318,12 @@ The state greeter asks you:
 (text-colour:green)[Hail Mary. You are about to retire and rest. 
 are you happy with the merciful judgements you made today?]
 
-[[kill. -> kill self]]
-[[spare -> workday 2.1]]
-[[do nothing -> killed by state]]
+[[kill. (self)-> kill self]]
+[[spare. (self)-> workday 2.1]]
+[[do nothing. -> killed by state]]
+
+
+:: day 2 end {"position":"825,1875","size":"100,100"}
 
 
 
