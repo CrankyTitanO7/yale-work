@@ -1,0 +1,210 @@
+\documentclass[12pt, letterpaper]{article}
+\title{pset 5}
+\author{Jaden Lee\thanks{made in Overleaf}}
+\date{2/19/26}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{outlines}
+
+\usepackage{amssymb}
+\usepackage{tabularx}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\arraystretch}{1.25}
+\begin{document}
+\maketitle
+\hyperlink{https://yale.instructure.com/courses/113840/assignments/558953}{https://yale.instructure.com/courses/113840/assignments/558953}
+% \neg for neg
+% \wedge for and 
+% \vee for or
+% \rightarrow
+% \equiv
+
+% https://www.tablesgenerator.com/# <-- latex table generator
+
+\section{Problem 1}
+Our goal is to find the smallest k so that can we can make k' cents postage for any integer $k' \geq k$ with 4-, 9- and 15-cent stamps. (
+k and k' are restricted to be integers throughout the prompts given below.)
+
+\subsection{solution}
+
+\begin{outline}[enumerate]
+    \1 Prove that if you can make k cents postage with some combination of 4-, 9-, and 15-cent stamps that includes at least 2 4-cent stamps, then you can make k+1 cents postage
+        \2 suppose there $\exists k \in \Z [4a + 9b + 15c = k]$ and that $ a \geq 2$
+        
+        let a' = a-2 and b' = b+1 and c' = c and k' = 4a' + 9b' + 15c'; also that a',b',c',k' $\exists \in \N$
+        so $$k' = 4(a-2) + 9 (b+1) + 15c$$
+        $$= 4a - 8 + 9b + 9 + c$$
+        $$= k - 8 + 9 = k + 1$$
+        conclusion: you can make k+1 cents postage given that you have at least 2 4-cent postages
+
+    \1 Prove that if you can make k  cents postage with some combination of 4-, 9-, and 15-cent stamps that includes at least 2 9-cent stamps, then you can make k+1 cents postage
+        \2 suppose there $\exists k \in \Z [4a + 9b + 15c = k]$ and that $ b \geq 2$
+            
+        let a' = a+1 and b' = b-2 and c' = c+1 and k' = 4a' + 9b' + 15c'; also that a',b',c',k' $\exists \in \N$
+        so $$k' = 4(a+1) + 9 (b-2) + 15 (c+1)$$
+        $$= 4a + 4 + 9b - 18 + c + 15$$
+        $$= k - 18 + 19 = k + 1$$
+        conclusion: you can make k+1 cents postage given that you have at least 2 9-cent postages
+    
+    \1 Prove that if you can make k  cents postage with some combination of 4-, 9-, and 15-cent stamps that includes at least 1 15-cent stamps, then you can make k+1 cents postage
+
+        \2 suppose there $\exists k \in \Z [4a + 9b + 15c = k]$ and that $ b \geq 2$
+                
+        let a' = a+4 and b' = b and c' = c-1 and k' = 4a' + 9b' + 15c'; also that a',b',c',k' $\exists \in \N$
+        so $$k' = 4(a+4) + 9 (b) + 15 (c-1)$$
+        $$= 4a + 16 + 9b + c - 15$$
+        $$= k - 15 + 16 = k + 1$$
+        conclusion: you can make k+1 cents postage given that you have at least 1 15-cent postages
+    
+    \1 Prove that if you have k  cents postage for some $k \geq 14$ then you must have either 1) at least 2 4-cent stamps; 2) at least 2 9-cent stamps; or 3) at least 1 15-cent stamp.
+
+        \2 $\therefore $ where $\exists a,b,c \in \N [k = 4a+9b+15c \geq 14]$
+
+        base case: a,b,c = 0; then k < 14 so cannot be true
+            \3 lemma: if $c \geq 1 \rightarrow k \geq 14$
+                in this case, $k \geq 15 \cdot c$
+                $$= 15 \geq 14$$
+
+            \3 cases where 2 of a,b,c are 0 but one is not.
+            
+                \4 a $\neq$ 0; note that if $a < 4, k < 14$ by algebra (in this case, k = 4a); by contrapositive (modus ponens), $a \geq 4 > 2$ in this case
+                
+                \4 b $\neq$ 0; note that if $b < 2, k < 14$ by algebra (in this case, k = 9b); by contrapositive (modus ponens), $b \geq 2$ in this case
+
+                \4 c $\neq$ 0; see lemma
+
+            \3 cases where 1 of a,b,c are 0 but two are not.
+
+                \4 a,b $\neq$ 0;$k = 4a + 9b$ if $a \leq 1\wedge b$ $\leq 1$, then k $<$ 14. By contrapositive (modus ponens), a,b must be $\geq 2$ each
+
+                \4 b,c $\neq$ 0; see lemma
+
+                \4 c,a $\neq$ 0; see lemma
+
+            \3 case where none are 0
+
+                \4 see lemma
+    
+    \1 Find the smallest k so that you can make k' cents postage for any $k' \geq k$ with 4-, 9-, and 15-cent stamps.
+
+        \2 suppose that $\exists a,b,c \in \N [k = 4a+9b+15c]$
+        
+        this is a case of $p \vee q \vee r$ where 
+            \3 $p \equiv a \geq 2$
+            \3 $q \equiv b \geq 2$
+            \3 $r \equiv c \geq 1$
+        (if any of the above conditions are met, k+1 can be performed.)
+
+        furthermore, k+1 must also contain these conditions ($p \vee q \vee r$ must also apply to k+1)
+
+        method: find smallest of the base cases
+
+        \2 
+        strong induction: for all natural numbers p(i) > 19, if p(n) is true for n = 18, … , k - 1
+        then p(k) is true
+            \3 base case: is p(n) true for 18? yes, because 18 = 9 $\cdot$ 2 = 2b
+            \3 base case: is p(n) true for 19? yes, because 19 = 15 + 4 = c + a
+            \3 base case: is p(n) true for 20? yes, because 20 = 4 $\cdot 5$= 5a
+
+    \1 For your chosen k , prove that you can make k' cents postage for any $k' \geq k$ with some combination of 4-, 9-, and 15-cent stamps.
+
+    (continued from proof above)
+        \2 strong induction: for all natural numbers p(i) > 19, if p(n) is true for n = 18, … , k - 1
+        then p(k) is true
+        
+            \3 suppose p(i) is true for all i where $18 \leq i \leq k-1$
+            p(k) = 4a + 9b + 15c
+
+            since $a \geq 2 \vee b \geq 2 \vee c \geq 1$ for P(i), p(k) is true 
+\end{outline}
+
+
+
+\section{problem 2}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{cpsc2020//pset5/p2.png}
+    \caption{problem 2}
+    \label{fig:placeholder}
+\end{figure}
+
+\subsection{solution}
+
+\textbf{base case: }
+$ n = 0$
+$$\sum_{i=1}^{n} 2i+3 = n(n+4)$$
+$$= \sum_{i=1}^{0} 2i+3 = n(n+4)$$
+$$0 = 0$$ 
+(empty set rule used above)
+
+\textbf{inductive step: }suppose $n \geq 0$, and the rule applies to n
+$$\sum_{i=1}^{n+1} 2i+3 = \sum_{i=1}^{n} 2i+3 + (2(n+1) + 3)$$
+$$= n(n+4) + (2(n+1) + 3)$$
+$$= n^2 + 4n + (2(n+1) + 3)$$
+$$= n^2 + 6n + 5$$
+$$= (n+1)(n+5)$$
+$$= (n+1)((n+1) +4)$$
+
+
+
+\section{problem 3}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{cpsc2020//pset5/problem 3.png}
+    \caption{problem 3}
+    \label{fig:placeholder}
+\end{figure}
+
+\section{solution}
+\textbf{base case: } n = 1
+$$a_1 = 8$$ $$8 \mid 8$$
+
+\textbf{induction step: } suppose for all $n \geq 1$, $odd(n) \rightarrow 8 \mid a_n$
+
+$$a_{n+2} = [a_{n}  + 4(n+2) - 2] + 4((n+1) + 1) - 2$$
+$$ = [a_{n}  + 4n + 2] + 4(n+2) -2$$
+$$ = a_{n}  + 4n + 2 + 4n + 6 $$
+$$ = a_{n}  + 8n + 8 $$
+
+since $8 \mid a_n \wedge 8 \mid 8n \wedge 8 \mid 8$
+and since $n + 2$ is odd
+$8 \mid a_{n +2}$ given n is an odd natural number
+
+\section{problem 4}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{cpsc2020//pset5/problem 4.png}
+    \caption{problem 4}
+    \label{fig:placeholder}
+\end{figure}
+
+
+\subsection{solution}
+
+\textbf{base cases}: 
+
+$a_0 = 4$ (mod 6)
+
+$a_1 = 16$ = 4 (mod 6)
+
+\textbf{induction step (stronk)}:
+
+for some index i where $\exists i \in  \N [0 \leq i \leq n-1]$ and that p(i) is true (that $a_i = 4$ (mod 6)
+
+$ a_n = 2 \cdot a_{n-1} + a_{n-2} - 2$
+
+$a_n$ (mod 6) $ = 2 \cdot $ 4 (mod 6) + 4 (mod 6) - 2 (mod 6)
+
+ = 8 (mod 6) + 4 (mod 6) - 2
+
+ = 2 (mod 6) - 2 (mod 6) + 4 (mod 6)
+ 
+ = 4 (mod 6)
+
+ $a_n$ = 4 (mod 6) for all integers $n \geq 0$
+
+
+\end{document}
