@@ -214,6 +214,9 @@ LinkedList *reverse_list(LinkedList *list)
 
     Node *head = current;
 
+    if (current == NULL)
+        return list;
+
     // TODO (OPTIONAL): Traverse the list with a while loop and reverse the pointers
     while (current->next != NULL)
     {
