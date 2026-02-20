@@ -28,7 +28,7 @@ unittest.o: unittest.c linked_list.h
 # --- cleanup ---
 
 clean:
-	rm -f *.o main
+	rm -f *.o main vgcore.*
 
 # --- other shortcuts ---
 
